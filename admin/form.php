@@ -126,9 +126,14 @@
                       </div>
                       <div class="row">
                         <div class="col-md-6 form-row-padding">
-                          <input type="checkbox" class="form-check-input" id="scholarcheckbox"><label class="form-check-label" for="exampleCheck1">Scholarship</label>
+                          <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary">
+                              <input type="checkbox" autocomplete="off"> Scholarship
+                            </label>
+                          </div>
                         </div>
                       </div>
+                      
                     </form>
 
                   </div>
