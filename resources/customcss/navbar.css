@@ -1,0 +1,120 @@
+/* START OF CSS FOR NAVBAR AND LOGO */
+    #fixme1 {position: fixed;left: 0;right: 0; top:0; bottom:100%;}
+    #fixme2 {position: fixed;left: 0;right: 0; top:46px; z-index: 3;}
+    body{
+      padding-top: 100px;
+    }
+
+    .nav-cust-bg1{
+      background: #d5f1ea00;
+      padding-bottom: 8vh;
+    }
+    .nav-cust-bg2{
+        background: #d5f1ea00;
+    }
+    .navbar-logo {
+      background-image: url(../images/ICCLogo.png);
+      width: 180px;
+      height: 180px;
+      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      z-index: 3;
+    }
+    .desktop{
+      display: block;
+    }
+    .mobile{
+      display: none;
+    }
+    .title{
+      margin-right: auto; 
+      margin-left: auto; 
+      font-size: 1.8em;
+    }
+    @media (max-width: 800px){
+      .navbar-logo {
+      background-image: url(../images/ICCLogo.png);
+      width: 100px;
+      height: 100px;
+      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      z-index: 3;
+      }
+      .nav-cust-bg1{
+      background: #d5f1ea00;
+
+      }
+      .desktop{
+      display: none
+      }
+      .mobile{
+        display: block;
+      }
+      .title{
+      margin-right: 20px; 
+      margin-left: auto; 
+      font-size: 1.8em;
+    }
+    }
+
+    .nav-right-cust{
+      float:right;
+    }
+
+   .navbar.navbar-default {
+  background: #fff;
+  border: 0px;
+}
+.navbar .navbar-brand {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+}
+.navbar ul,
+.navbar li,
+.navbar a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #000000;
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+.navbar .navbar-toggle {
+  border: 0px;
+
+}
+@media (max-width: 480px) {
+  .navbar-nav.navbar-right {
+    top: -125px;
+    right: 25px;
+    float: right;
+    position: relative;
+  }
+  .navbar-nav.navbar-right > li {
+    display: table-cell;
+  }
+  
+
+ 
+}
+.btn-bknow{
+  background-color: #1E6B57;
+  color:#f4f4f4;
+}
+.btn-bknow:hover{
+  background-color: #165042;
+  color:white;
+  
+}
+nav{
+  color:#373737;
+}
+/* END FOR NAVBAR AND LOGO */

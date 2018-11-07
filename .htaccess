@@ -1,0 +1,14 @@
+# HTID:4366644: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:4366644:
+
+
+#remove php file extension-e.g. https://example.com/file.php will become https://example.com/file
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+#error 404 page
+
+ErrorDocument 404 /projects/LaVirginiaResort/error404.php
