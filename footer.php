@@ -112,6 +112,6 @@
         <hr class="cust-hr" />
     </div>
 <div class="container-fluid foot-pad-bottom" style="background-color: #00789B; text-align: center;">
-    <h6 style="margin-bottom: 0; color:#F4F4F4;">&copy; JD(Januz, Dave). All Rights Reserved</h6>
+    <h6 style="margin-bottom: 0; color:#F4F4F4;">&copy; JDI(Januz, Dave and Ivan). All Rights Reserved</h6>
 </div>
 </footer>

@@ -103,13 +103,13 @@
                     <form class="" action="actions/addrecord.php" method="post">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
-                          <input class="form-control" type='text' name="firstname" placeholder="First Name">
+                          <input required class="form-control" type='text' name="firstname" placeholder="First Name">
                         </div>
                         <div class="col-md-1 form-row-padding">
                           <input class="form-control" type='text' name="mi" placeholder="M.I." maxlength="1">
                         </div>
                         <div class="col-md-5 form-row-padding">
-                          <input class="form-control" type='text' name="lastname" placeholder="Last Name">
+                          <input required class="form-control" type='text' name="lastname" placeholder="Last Name">
                         </div>
                         <div class="col-md-1 form-row-padding">
                           <input class="form-control" type='text' name="suffix" placeholder="Ex." maxlength="2">
