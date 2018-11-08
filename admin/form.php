@@ -135,7 +135,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="btn-group btn-group-toggle col-md-12" data-toggle="buttons">
                           <label class="btn btn-info">
                             <input type="radio" name="options" id="option1" autocomplete="off" value="item1" > Active
                           </label>
