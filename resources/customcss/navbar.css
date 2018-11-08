@@ -4,18 +4,17 @@
     body{
       padding-top: 100px;
     }
-
     .nav-cust-bg1{
-      background: #d5f1ea00;
-      padding-bottom: 8vh;
+        background: #f4f4f4;
+
     }
     .nav-cust-bg2{
-        background: #d5f1ea00;
+        background: #f4f4f4;
     }
     .navbar-logo {
-      background-image: url(../images/ICCLogo.png);
-      width: 180px;
-      height: 180px;
+      background-image: url(../images/GADDSEAPLOGOV2.png);
+      width: 150px;
+      height: 150px;
       background-size: 100%;
       background-position: center center;
       background-repeat: no-repeat;
@@ -23,46 +22,6 @@
       top: 5px;
       left: 15px;
       z-index: 3;
-    }
-    .desktop{
-      display: block;
-    }
-    .mobile{
-      display: none;
-    }
-    .title{
-      margin-right: auto; 
-      margin-left: auto; 
-      font-size: 1.8em;
-    }
-    @media (max-width: 800px){
-      .navbar-logo {
-      background-image: url(../images/ICCLogo.png);
-      width: 100px;
-      height: 100px;
-      background-size: 100%;
-      background-position: center center;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 5px;
-      left: 15px;
-      z-index: 3;
-      }
-      .nav-cust-bg1{
-      background: #d5f1ea00;
-
-      }
-      .desktop{
-      display: none
-      }
-      .mobile{
-        display: block;
-      }
-      .title{
-      margin-right: 20px; 
-      margin-left: auto; 
-      font-size: 1.8em;
-    }
     }
 
     .nav-right-cust{
@@ -91,7 +50,7 @@
   border: 0px;
 
 }
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .navbar-nav.navbar-right {
     top: -125px;
     right: 25px;
@@ -101,18 +60,30 @@
   .navbar-nav.navbar-right > li {
     display: table-cell;
   }
-  
+  .navbar-logo {
+    background-image: url(../images/GADDSEAPLOGOV2.png);
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    z-index: 3;
+    
+  }
 
- 
+
 }
 .btn-bknow{
-  background-color: #1E6B57;
+  background-color: #00C6FF;
   color:#f4f4f4;
 }
 .btn-bknow:hover{
-  background-color: #165042;
+  background-color: #00789B;
   color:white;
-  
+
 }
 nav{
   color:#373737;
