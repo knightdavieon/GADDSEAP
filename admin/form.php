@@ -100,7 +100,7 @@
 
                   </div>
                   <div class="card-body">
-                    <form class="" action="test.php" method="post">
+                    <form class="" action="actions/addrecord.php" method="post">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
                           <input class="form-control" type='text' name="firstname" placeholder="First Name">
@@ -177,16 +177,94 @@
 
                       </div>
 
-
+<br>
  <div class="row" style="text-align:center;">
                       <div class="col-md-4">
                         <hr />
                       </div>
                       <div class="col-md-4">
-                        <h4>Personal Information</h4>
+                        <h4>Family Background</h4>
                       </div>
                       <div class="col-md-4">
                         <hr />
+                      </div>
+                    </div>
+                    <br>
+
+
+                    <div class="row">
+                      <div class="col-md-6 form-row-padding">
+                        <input class="form-control" type="text" name="father" placeholder="Name of Father">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="ageF" placeholder="Age">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="occupationF" placeholder="Occupation"> 
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 form-row-padding">
+                        <input class="form-control" type="text" name="mother" placeholder="Name of Mother">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="ageM" placeholder="Age">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="occupationM" placeholder="Occupation"> 
+                      </div>
+                    </div>
+
+
+                     <div class="row">
+                      <div class="col-md-6 form-row-padding">
+                        <input class="form-control" type="text" name="siblings1" placeholder="Name of Siblings">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="age1" placeholder="Age">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="occupation1" placeholder="Occupation"> 
+                      </div>
+                    </div>
+
+
+                     <div class="row">
+                      <div class="col-md-6 form-row-padding">
+                        <input class="form-control" type="text" name="siblings2" placeholder="Name of Siblings">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="age2" placeholder="Age">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="occupation2" placeholder="Occupation"> 
+                      </div>
+                    </div>
+
+
+                     <div class="row">
+                      <div class="col-md-6 form-row-padding">
+                        <input class="form-control" type="text" name="siblings3" placeholder="Name of Siblings">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="age3" placeholder="Age">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="occupation3" placeholder="Occupation"> 
+                      </div>
+                    </div>
+
+
+                     <div class="row">
+                      <div class="col-md-6 form-row-padding">
+                        <input class="form-control" type="text" name="spouse" placeholder="Name of Spouse (if any)">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="ageS" placeholder="Age">
+                      </div>
+                      <div class="col-md-3 form-row-padding">
+                        <input class="form-control" type="text" name="occupationS" placeholder="Occupation"> 
                       </div>
                     </div>
 
@@ -197,7 +275,7 @@
                           <label for="">Purpose</label>
                           <div class="btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-secondary">
-                              <input type="checkbox" name="checkbox" autocomplete="off"> Scholarship
+                              <input type="checkbox" name="scholarship" autocomplete="off" value="Scholarship"> Scholarship
                             </label>
                           </div>
                         </div>
