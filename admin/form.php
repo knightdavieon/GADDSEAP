@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-md-4 form-row-padding">
                           <select class="form-control" name="civilstatus">
-                            <option value=" ">-- Select Civil Status --</option>
+                            <option value=" ">--  Select Civil Status --</option>
                             <option value="single">Single</option>
                             <option value="married">Married</option>
                             <option value="Divorced">Divorced</option>
@@ -138,7 +138,11 @@
                           <input class="form-control" type='text' name="school" placeholder="School">
                         </div>
                         <div class="col-md-4 form-row-padding">
+<<<<<<< HEAD
                           <input autocomplete="off" class="form-control" type='text' name="birthdate" id="datetimepicker1" placeholder="Birthdate">
+=======
+                          <input class="form-control" type='date' name="birthdate" placeholder="Birthdate">
+>>>>>>> dca620f15ac44bc8f64b28e79e869c6479ef38ec
                         </div>
 
                       </div>
@@ -189,19 +193,17 @@
 
 
                       <div class="row">
-                        <label for="">Purpose</label>
+
                         <div class="col-md-6 form-row-padding">
+                          <label for="">Purpose</label>
                           <div class="btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-secondary">
                               <input type="checkbox" name="checkbox" autocomplete="off"> Scholarship
                             </label>
                           </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <label for="">Educational</label>
-
-                        <div class="col-md-6">
+                        <div class="col-md-6 form-row-padding">
+                          <label for="">Educational</label>
                           <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio1" name="educational" class="custom-control-input" value="project">
                             <label class="custom-control-label" for="customRadio1">Project</label>
@@ -223,8 +225,8 @@
                             <label class="custom-control-label" for="customRadio5">Others</label>
                           </div>
                         </div>
-
                       </div>
+                      
                       <hr />
                       <div class="row">
                         <button type="submit" class="btn btn-primary">Submit</button>
