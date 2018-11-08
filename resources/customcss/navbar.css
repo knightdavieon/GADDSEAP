@@ -71,17 +71,17 @@
     top: 5px;
     left: 15px;
     z-index: 3;
-    
+
   }
 
 
 }
 .btn-bknow{
-  background-color: #00C6FF;
+  background-color: #00789B;
   color:#f4f4f4;
 }
 .btn-bknow:hover{
-  background-color: #00789B;
+  background-color: #00C6FF;
   color:white;
 
 }
