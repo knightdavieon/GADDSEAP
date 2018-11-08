@@ -63,11 +63,11 @@
         <!-- Bread crumb -->
         <div class="row page-titles">
           <div class="col-md-5 align-self-center">
-            <h3 class="text-primary">Dashboard</h3> </div>
+            <h3 class="text-primary">Student Application Form</h3> </div>
             <div class="col-md-7 align-self-center">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item active">Student Application Form</li>
               </ol>
             </div>
           </div>
@@ -97,33 +97,48 @@
                   <div class="card-body">
                     <form class="" action="test.php" method="post">
                       <div class="row">
-                        <div class="col-md-6 form-row-padding">
-                          <input class="form-control" type='text' name="nameofstudent" placeholder="First Name">
+                        <div class="col-md-8 form-row-padding">
+                          <input class="form-control" type='text' name="nameofstudent" placeholder="Name of Students">
                         </div>
-                        <div class="col-md-6 form-row-padding">
-                          <input class="form-control" type='text' name="contact" placeholder="Last Name">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6 form-row-padding">
-                          <input class="form-control" type='text' name="nameofstudent" placeholder="Address">
-                        </div>
-                        <div class="col-md-6 form-row-padding">
-                          <input class="form-control" type='text' name="contact" placeholder="Contact #">
+                        <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="contact" placeholder="Civil Status">
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-md-12 form-row-padding">
+                        <div class="col-md-8 form-row-padding">
+                          <input class="form-control" type='text' name="address" placeholder="Address">
+                        </div>
+                        <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="birthdate" placeholder="Birthdate">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-8 form-row-padding">
                           <input class="form-control" type='text' name="school" placeholder="School">
                         </div>
+                         <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="citizenship" placeholder="Citizenship">
+                        </div>
                       </div>
                       <div class="row">
-                        <div class="col-md-6 form-row-padding">
-                          <input class="form-control" type='text' name="course" placeholder="Course">
+                        <div class="col-md-8 form-row-padding">
+                          <input class="form-control" type='text' name="course" placeholder="Course & Year">
                         </div>
-                        <div class="col-md-6 form-row-padding">
-                          <input class="form-control" type='text' name="year" placeholder="Year">
+                        <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="religion" placeholder="Religion">
                         </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="contact" placeholder="Contact No">
+                        </div>
+                        <div class="col-md-2 form-row-padding">
+                          <input class="form-control" type='text' name="age" placeholder="Age">
+                        </div>
+                        <div class="col-md-2 form-row-padding">
+                          <input class="form-control" type='text' name="sex" placeholder="Sex">
+                        </div>
+
                       </div>
                       <div class="row">
                         <div class="col-md-6 form-row-padding">
