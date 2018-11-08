@@ -138,11 +138,10 @@
                           <input class="form-control" type='text' name="school" placeholder="School">
                         </div>
                         <div class="col-md-4 form-row-padding">
-<<<<<<< HEAD
+
                           <input autocomplete="off" class="form-control" type='text' name="birthdate" id="datetimepicker1" placeholder="Birthdate">
-=======
-                          <input class="form-control" type='date' name="birthdate" placeholder="Birthdate">
->>>>>>> dca620f15ac44bc8f64b28e79e869c6479ef38ec
+
+
                         </div>
 
                       </div>
