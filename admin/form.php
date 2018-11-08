@@ -37,7 +37,11 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
   }
-
+  .btn-secondary:not(:disabled):not(.disabled).active{
+    border-color: #0070EA;
+    color:white;
+    background-color: #007BFF;
+  }
 
 </style>
 </head>
@@ -97,36 +101,57 @@
                   <div class="card-body">
                     <form class="" action="test.php" method="post">
                       <div class="row">
-                        <div class="col-md-8 form-row-padding">
-                          <input class="form-control" type='text' name="nameofstudent" placeholder="Name of Students">
+                        <div class="col-md-5 form-row-padding">
+                          <input class="form-control" type='text' name="firstname" placeholder="First Name">
                         </div>
-                        <div class="col-md-4 form-row-padding">
-                          <input class="form-control" type='text' name="contact" placeholder="Civil Status">
+                        <div class="col-md-1 form-row-padding">
+                          <input class="form-control" type='text' name="mi" placeholder="M.I." maxlength="1">
                         </div>
+                        <div class="col-md-5 form-row-padding">
+                          <input class="form-control" type='text' name="lastname" placeholder="Last Name">
+                        </div>
+                        <div class="col-md-1 form-row-padding">
+                          <input class="form-control" type='text' name="suffix" placeholder="Ex." maxlength="2">
+                        </div>
+
                       </div>
                       <div class="row">
                         <div class="col-md-8 form-row-padding">
                           <input class="form-control" type='text' name="address" placeholder="Address">
                         </div>
                         <div class="col-md-4 form-row-padding">
-                          <input class="form-control" type='text' name="birthdate" placeholder="Birthdate">
+                          <select class="form-control" name="civilstatus">
+                            <option value=" ">-- Select Civil Status --</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                            <option value="itscomplicated">Its Complicated</option>
+                            <option value="searching">Searching</option>
+                            <option value="sawi">Sawi</option>
+                          </select>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-8 form-row-padding">
                           <input class="form-control" type='text' name="school" placeholder="School">
                         </div>
-                         <div class="col-md-4 form-row-padding">
-                          <input class="form-control" type='text' name="citizenship" placeholder="Citizenship">
+                        <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="birthdate" placeholder="Birthdate">
                         </div>
+
                       </div>
                       <div class="row">
-                        <div class="col-md-8 form-row-padding">
-                          <input class="form-control" type='text' name="course" placeholder="Course & Year">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type='text' name="course" placeholder="Course">
+                        </div>
+                        <div class="col-md-2 form-row-padding">
+                          <input class="form-control" type='text' name="year" placeholder="Year">
                         </div>
                         <div class="col-md-4 form-row-padding">
-                          <input class="form-control" type='text' name="religion" placeholder="Religion">
-                        </div>
+                         <input class="form-control" type='text' name="citizenship" placeholder="Citizenship" value="Filipino">
+                       </div>
+
                       </div>
                       <div class="row">
                         <div class="col-md-4 form-row-padding">
@@ -138,29 +163,47 @@
                         <div class="col-md-2 form-row-padding">
                           <input class="form-control" type='text' name="sex" placeholder="Sex">
                         </div>
+                        <div class="col-md-4 form-row-padding">
+                          <input class="form-control" type='text' name="religion" placeholder="Religion">
+                        </div>
 
                       </div>
                       <div class="row">
+                        <label for="">Purpose</label>
                         <div class="col-md-6 form-row-padding">
                           <div class="btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-info">
+                            <label class="btn btn-secondary">
                               <input type="checkbox" name="checkbox" autocomplete="off"> Scholarship
                             </label>
                           </div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="btn-group btn-group-toggle col-md-12" data-toggle="buttons">
-                          <label class="btn btn-info">
-                            <input type="radio" name="options" id="option1" autocomplete="off" value="item1" > Active
-                          </label>
-                          <label class="btn btn-info">
-                            <input type="radio" name="options" id="option2" autocomplete="off" value="item2"> Radio
-                          </label>
-                          <label class="btn btn-info">
-                            <input type="radio" name="options" id="option3" autocomplete="off" value="item3"> Radio
-                          </label>
+                        <label for="">Educational</label>
+
+                        <div class="col-md-6">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="educational" class="custom-control-input" value="project">
+                            <label class="custom-control-label" for="customRadio1">Project</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="educational" class="custom-control-input" value="seminars">
+                            <label class="custom-control-label" for="customRadio2">Seminars</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio3" name="educational" class="custom-control-input" value="boardexam">
+                            <label class="custom-control-label" for="customRadio3">Board Exam</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio4" name="educational" class="custom-control-input" value="books">
+                            <label class="custom-control-label" for="customRadio4">Books</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio5" name="educational" class="custom-control-input" value="others">
+                            <label class="custom-control-label" for="customRadio5">Others</label>
+                          </div>
                         </div>
+
                       </div>
                       <hr />
                       <div class="row">
