@@ -54,7 +54,7 @@
 }
 @media (max-width: 480px){
   .carousel-caption{
-    width: 60vh;
+    width: 50vh;
   }
   .fade-carousel .carousel-inner .carousel-caption{
       top: 50%;
