@@ -38,6 +38,7 @@
     padding-bottom: 1vh;
   }
 
+
 </style>
 </head>
 
@@ -94,7 +95,7 @@
 
                   </div>
                   <div class="card-body">
-                    <form class="" action="" method="post">
+                    <form class="" action="test.php" method="post">
                       <div class="row">
                         <div class="col-md-6 form-row-padding">
                           <input class="form-control" type='text' name="nameofstudent" placeholder="First Name">
@@ -127,13 +128,30 @@
                       <div class="row">
                         <div class="col-md-6 form-row-padding">
                           <div class="btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-secondary">
-                              <input type="checkbox" autocomplete="off"> Scholarship
+                            <label class="btn btn-info">
+                              <input type="checkbox" name="checkbox" autocomplete="off"> Scholarship
                             </label>
                           </div>
                         </div>
                       </div>
-                      
+                      <div class="row">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="btn btn-info">
+                            <input type="radio" name="options" id="option1" autocomplete="off" value="item1" > Active
+                          </label>
+                          <label class="btn btn-info">
+                            <input type="radio" name="options" id="option2" autocomplete="off" value="item2"> Radio
+                          </label>
+                          <label class="btn btn-info">
+                            <input type="radio" name="options" id="option3" autocomplete="off" value="item3"> Radio
+                          </label>
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="row">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+
                     </form>
 
                   </div>
