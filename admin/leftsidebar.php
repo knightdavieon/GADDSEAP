@@ -7,6 +7,8 @@
             <ul id="sidebarnav">
                 <li> <a href="index" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard </span></a>
                 </li>
+                 <li> <a href="form" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Student List </span></a>
+                </li>
                 <li> <a href="form" aria-expanded="false"><i class="fa fa-file"></i><span class="hide-menu">Student Application Form </span></a>
                 </li>
                 <li class="nav-devider"></li>

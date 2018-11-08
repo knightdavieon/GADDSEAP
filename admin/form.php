@@ -123,10 +123,10 @@
                         <div class="col-md-4 form-row-padding">
                           <select class="form-control" name="civilstatus">
                             <option value=" ">--  Select Civil Status --</option>
-                            <option value="single">Single</option>
-                            <option value="married">Married</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
                             <option value="Divorced">Divorced</option>
-                            <option value="widowed">Widowed</option>
+                            <option value="Widowed">Widowed</option>
                             <option value="itscomplicated">Its Complicated</option>
                             <option value="searching">Searching</option>
                             <option value="sawi">Sawi</option>
@@ -197,10 +197,10 @@
                         <input class="form-control" type="text" name="father" placeholder="Name of Father">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="ageF" placeholder="Age">
+                        <input class="form-control" type="text" name="father_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="occupationF" placeholder="Occupation"> 
+                        <input class="form-control" type="text" name="father_occupation" placeholder="Occupation"> 
                       </div>
                     </div>
 
@@ -209,49 +209,49 @@
                         <input class="form-control" type="text" name="mother" placeholder="Name of Mother">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="ageM" placeholder="Age">
+                        <input class="form-control" type="text" name="mother_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="occupationM" placeholder="Occupation"> 
+                        <input class="form-control" type="text" name="mother_occupation" placeholder="Occupation"> 
                       </div>
                     </div>
 
 
                      <div class="row">
                       <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="siblings1" placeholder="Name of Siblings">
+                        <input class="form-control" type="text" name="siblings_1" placeholder="Name of Siblings">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="age1" placeholder="Age">
+                        <input class="form-control" type="text" name="1_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="occupation1" placeholder="Occupation"> 
+                        <input class="form-control" type="text" name="1_occupation" placeholder="Occupation"> 
                       </div>
                     </div>
 
 
                      <div class="row">
                       <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="siblings2" placeholder="Name of Siblings">
+                        <input class="form-control" type="text" name="siblings_2" placeholder="Name of Siblings">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="age2" placeholder="Age">
+                        <input class="form-control" type="text" name="2_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="occupation2" placeholder="Occupation"> 
+                        <input class="form-control" type="text" name="2_occupation" placeholder="Occupation"> 
                       </div>
                     </div>
 
 
                      <div class="row">
                       <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="siblings3" placeholder="Name of Siblings">
+                        <input class="form-control" type="text" name="siblings_3" placeholder="Name of Siblings">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="age3" placeholder="Age">
+                        <input class="form-control" type="text" name="3_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="occupation3" placeholder="Occupation"> 
+                        <input class="form-control" type="text" name="3_occupation" placeholder="Occupation"> 
                       </div>
                     </div>
 
@@ -261,10 +261,10 @@
                         <input class="form-control" type="text" name="spouse" placeholder="Name of Spouse (if any)">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="ageS" placeholder="Age">
+                        <input class="form-control" type="text" name="spouse_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="occupationS" placeholder="Occupation"> 
+                        <input class="form-control" type="text" name="spouse_occupation" placeholder="Occupation"> 
                       </div>
                     </div>
 
@@ -282,23 +282,23 @@
                         <div class="col-md-6 form-row-padding">
                           <label for="">Educational</label>
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="educational" class="custom-control-input" value="project">
+                            <input type="radio" id="customRadio1" name="educational" class="custom-control-input" value="Project">
                             <label class="custom-control-label" for="customRadio1">Project</label>
                           </div>
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="educational" class="custom-control-input" value="seminars">
+                            <input type="radio" id="customRadio2" name="educational" class="custom-control-input" value="Seminars">
                             <label class="custom-control-label" for="customRadio2">Seminars</label>
                           </div>
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio3" name="educational" class="custom-control-input" value="boardexam">
+                            <input type="radio" id="customRadio3" name="educational" class="custom-control-input" value="Board Exam">
                             <label class="custom-control-label" for="customRadio3">Board Exam</label>
                           </div>
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio4" name="educational" class="custom-control-input" value="books">
+                            <input type="radio" id="customRadio4" name="educational" class="custom-control-input" value="Books">
                             <label class="custom-control-label" for="customRadio4">Books</label>
                           </div>
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio5" name="educational" class="custom-control-input" value="others">
+                            <input type="radio" id="customRadio5" name="educational" class="custom-control-input" value="Others">
                             <label class="custom-control-label" for="customRadio5">Others</label>
                           </div>
                         </div>
