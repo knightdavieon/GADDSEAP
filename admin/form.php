@@ -19,6 +19,7 @@
 
   <title>GADDSEAP</title>
   <!-- Bootstrap Core CSS -->
+   <link rel="stylesheet" type="text/css" href="../resources/css/jquery.datetimepicker.css"/>
   <link href="../resources/admindesign/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="../resources/admindesign/css/helper.css" rel="stylesheet">
@@ -90,7 +91,7 @@
                         <hr />
                       </div>
                       <div class="col-md-4">
-                        <h4>Student's Application Form</h4>
+                        <h4>Personal Information</h4>
                       </div>
                       <div class="col-md-4">
                         <hr />
@@ -137,7 +138,7 @@
                           <input class="form-control" type='text' name="school" placeholder="School">
                         </div>
                         <div class="col-md-4 form-row-padding">
-                          <input class="form-control" type='text' name="birthdate" placeholder="Birthdate">
+                          <input autocomplete="off" class="form-control" type='text' name="birthdate" id="datetimepicker1" placeholder="Birthdate">
                         </div>
 
                       </div>
@@ -161,13 +162,32 @@
                           <input class="form-control" type='text' name="age" placeholder="Age">
                         </div>
                         <div class="col-md-2 form-row-padding">
-                          <input class="form-control" type='text' name="sex" placeholder="Sex">
+                          <select class="form-control" name="sex">
+                             <option value=" ">-- Sex --</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                          </select>
                         </div>
                         <div class="col-md-4 form-row-padding">
                           <input class="form-control" type='text' name="religion" placeholder="Religion">
                         </div>
 
                       </div>
+
+
+ <div class="row" style="text-align:center;">
+                      <div class="col-md-4">
+                        <hr />
+                      </div>
+                      <div class="col-md-4">
+                        <h4>Personal Information</h4>
+                      </div>
+                      <div class="col-md-4">
+                        <hr />
+                      </div>
+                    </div>
+
+
                       <div class="row">
                         <label for="">Purpose</label>
                         <div class="col-md-6 form-row-padding">
@@ -245,6 +265,17 @@
       <script src="../resources/admindesign/js/custom.min.js"></script>
       <script src="../resources/admindesign/js/lib/datatables/datatables.min.js"></script>
       <script src="../resources/admindesign/js/lib/datatables/datatables2-init.js"></script>
+       <script src="../resources/js/jquery.datetimepicker.full.js"></script>
+
+       <script>
+         $('#datetimepicker1').datetimepicker({
+        lang:'en',
+        timepicker:false,
+        format:'d/m/Y',
+        formatDate:'Y/m/d'
+
+    });
+       </script>
 
 
 
