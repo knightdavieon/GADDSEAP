@@ -49,7 +49,7 @@
       font-weight: 650;
     }
   }
-  @media (max-width: 420px ) {
+  @media (max-width: 780px ) {
     .col-padding h3{
       text-align: center;
       font-weight: 650;
