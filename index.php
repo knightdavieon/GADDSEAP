@@ -129,13 +129,13 @@
       <div class="col-md-6">
         <div class="col-padding">
           <h3>MISSION</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie at elementum eu facilisis sed. Quam lacus suspendisse faucibus interdum posuere lorem ipsum. Ac felis donec et odio pellentesque diam. In egestas erat imperdiet sed euismod nisi porta lorem. Malesuada fames ac turpis egestas maecenas pharetra convallis. Malesuada nunc vel risus commodo viverra. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Neque convallis a cras semper auctor neque vitae tempus quam. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Eu ultrices vitae auctor eu augue. Tempus quam pellentesque nec nam. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Eget nullam non nisi est sit amet. Facilisis volutpat est velit egestas dui. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing.</p>
+          <p>Zambales with vast productive development opportunity lands, is envisioned to be an Agri-Based technologically industrialized province through the establishment of globally competitive economic zones with a peaceful, a holistically healthy, and empowered citizenry in a politically stable environment.</p>
         </div>
       </div>
       <div class="col-md-6">
         <div class="col-padding">
-          <h3>VISSION</h3>
-          <p>Risus sed vulputate odio ut enim blandit. Congue mauris rhoncus aenean vel elit scelerisque mauris. Dui id ornare arcu odio ut sem nulla pharetra. Enim nunc faucibus a pellentesque sit. Sit amet commodo nulla facilisi. Enim facilisis gravida neque convallis a cras semper auctor neque. Velit ut tortor pretium viverra suspendisse. Enim nec dui nunc mattis enim ut. Eu non diam phasellus vestibulum lorem. Mattis aliquam faucibus purus in massa. Euismod nisi porta lorem mollis aliquam ut. Eu scelerisque felis imperdiet proin. Velit aliquet sagittis id consectetur. Congue quisque egestas diam in arcu cursus euismod quis viverra. Cursus in hac habitasse platea dictumst quisque. A lacus vestibulum sed arcu non odio euismod lacinia at. Nunc mi ipsum faucibus vitae. Congue quisque egestas diam in. Convallis posuere morbi leo urna molestie at elementum eu facilisis.</p>
+          <h3>VISION</h3>
+          <p>Promote the socio-cultural and economic status of the people by providing employment, livelihood and other income generating activities and provision of primary social services and infrastructive facilities for the upliftment of life and standard of living.</p>
         </div>
       </div>
 
