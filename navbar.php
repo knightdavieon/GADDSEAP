@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-light navbar-expand-md bg-faded justify-content-end nav-cust-bg1">
+<nav class="navbar fixed-top navbar-light navbar-expand-md bg-faded justify-content-end nav-cust-bg1" >
     <a href="index" class="navbar-logo"></a>
       <button class="btn btn-bknow" data-toggle="modal" data-target="#contactus" >Contact Us</button>
 
@@ -79,3 +79,7 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+</script>

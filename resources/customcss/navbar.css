@@ -50,7 +50,7 @@
   border: 0px;
 
 }
-@media (max-width: 720px) {
+
   .navbar-nav.navbar-right {
     top: -125px;
     right: 25px;
@@ -88,4 +88,7 @@
 nav{
   color:#373737;
 }
+/* CSS used here will be applied after bootstrap.css */
+
+
 /* END FOR NAVBAR AND LOGO */
