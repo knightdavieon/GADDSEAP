@@ -107,7 +107,8 @@ if (!empty($_POST)){
                   <div class="card-body">
 
 
-                    <form class="" action="actions/updaterecord.php" method="post">
+                    <form class="" action="actions/updaterecord.php<?php ?>" method="post">
+                       <input type="hidden" name="record_id" value="<?php echo $rowpersonal['record_id'];?>">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
                           <input required class="form-control" type='text' value="<?php echo $rowpersonal['first_name']?>" name="firstname" placeholder="First Name">
@@ -280,14 +281,16 @@ if (!empty($_POST)){
 
                         <div class="col-md-6 form-row-padding">
                           <label for="">Purpose</label>
+                           <input type="hidden" name="scholarship" value="">
                           <div class="btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-secondary <?php if($rowpersonal['purpose'] == "Scholarship"){echo "active"; } ?>">
+                            <label class="btn btn-secondary <?php if($rowpersonal['purpose'] == "Scholarship") echo "active";  ?>">
                               <input type="checkbox" name="scholarship" autocomplete="off" value="Scholarship"> Scholarship
                             </label>
                           </div>
                         </div>
                         <div class="col-md-6 form-row-padding">
                           <label for="">Educational</label>
+                           <input type="hidden" name="educational" value="">
                           <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio1" name="educational" class="custom-control-input" value="Project" <?php if($rowpersonal['educational'] == "Project"){echo "checked"; } ?>>
                             <label class="custom-control-label" for="customRadio1">Project</label>

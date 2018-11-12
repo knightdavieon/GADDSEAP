@@ -5,6 +5,7 @@ session_start();
 if (!empty($_POST)){
 
 ///////personal////////////
+	$id = $_POST['record_id'];
 	$firstname = $_POST['firstname'];
 	$mi = $_POST['mi'];
 	$lastname = $_POST['lastname'];
@@ -50,8 +51,9 @@ if (!empty($_POST)){
 
 
 
-	$updatepersonal = $conn->prepare("UPDATE personal_info SET first_name = :first_name, user_lastname = :userlname, user_contact = :usercont WHERE account_id = :id");
+	$updatepersonal = $conn->prepare("UPDATE personal_info SET first_name = :first_name, mi = :mi, last_name = :last_name, ex = :ex, address = :address, civil_status = :civil_status, school = :school, birthdate = :birthdate, course = :course, year = :year, citizenship = :citizenship, contact_no = :contact_no, age = :age, sex = :sex, religion = :religion, purpose = :purpose, educational = :educational WHERE record_id = :id");
 		$updatepersonal->execute(array(
+			"id"=>$id,
 		    "first_name" => $firstname,
 		    "mi" => $mi,
 		    "last_name" => $lastname,
@@ -67,35 +69,13 @@ if (!empty($_POST)){
 		    "age" => $age,
 		    "sex" => $sex,
 		    "religion" => $religion,
-		    "purpose" => $scholarship,
-		    "educational" => $educational,
-		    "record_date" => $record_date
+		   "purpose" => $scholarship,
+		    "educational" => $educational
+		  
 		));
 
 
-		$insertfamily = $conn->prepare("INSERT INTO family_background(record_id, father, father_age, father_occupation, mother, mother_age, mother_occupation, siblings_1, 1_age, 1_occupation, siblings_2, 2_age, 2_occupation, siblings_3, 3_age, 3_occupation, spouse, spouse_age, spouse_occupation)
-	    VALUES(:record_id, :father, :father_age, :father_occupation, :mother, :mother_age, :mother_occupation, :siblings_1, :1_age, :1_occupation, :siblings_2, :2_age, :2_occupation, :siblings_3, :3_age, :3_occupation, :spouse, :spouse_age, :spouse_occupation)");
-		$insertfamily->execute(array(
-			"record_id" => $idcode,
-		    "father" => $father,
-		    "father_age" => $father_age,
-		    "father_occupation" => $father_occupation,
-		    "mother" => $mother,
-		    "mother_age" => $mother_age,
-		    "mother_occupation" => $mother_occupation,
-		    "siblings_1" => $siblings_1,
-		    "1_age" => $age1,
-		    "1_occupation" => $occupation1,
-		    "siblings_2" => $siblings_2,
-		    "2_age" => $age2,
-		    "2_occupation" => $occupation2,
-		    "siblings_3" => $siblings_3,
-		    "3_age" => $age3,
-		    "3_occupation" => $occupation3,
-		    "spouse" => $spouse,
-		    "spouse_age" => $spouse_age,
-		    "spouse_occupation" => $spouse_occupation
-		));
+		
 
 		echo "<script language='JavaScript'>
 						window.location.href='../studentlist';
