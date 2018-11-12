@@ -20,10 +20,12 @@
   <style>
   body, html {
     height: 100%;
+    margin:0;
+    padding:0;
 
   }
   body{
-    background-color: #F7F7F7;
+    background-color: #F4F4F4;
   }
   /* Tablet and bigger */
   @media ( min-width: 768px ) {
@@ -53,6 +55,7 @@
     .col-padding h3{
       text-align: center;
       font-weight: 650;
+
     }
   }
   p{

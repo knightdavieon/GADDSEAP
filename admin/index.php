@@ -1,6 +1,6 @@
 <?php
-//include("sessionhandler.php");
-//include("../accessdb.php");
+include("sessionhandler.php");
+include("../accessdb.php");
 
 ?>
 <!DOCTYPE html>
