@@ -40,9 +40,9 @@ session_start();
 			                "logtimedate" => $logdate
 			            ));
 						*/
-						$_SESSION['accountsNotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> Account Updated!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-							    <span aria-hidden='true'>&times;</span>
-							  </button></div>";
+							$_SESSION['accountsNotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> Account Updated!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+								    <span aria-hidden='true'>&times;</span>
+								  </button></div>";
 
 
 		echo "<script language='JavaScript'>
