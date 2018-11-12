@@ -15,16 +15,13 @@ include_once("../accessdb.php");
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="../resources/image/png" sizes="16x16" href="../resources/photos/lalawigan ng zambales.png">
-    <title>Zambales Information System</title>
+    <link rel="icon" type="../resources/images/png" sizes="16x16" href="../resources/images/GADDSEAPLOGOV2.png">
+    <title>GADDSEAP</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../resources/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../resources/admindesign/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-
-    <link href="../resources/css/lib/owl.carousel.min.css" rel="stylesheet" />
-    <link href="../resources/css/lib/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="../resources/css/helper.css" rel="stylesheet">
-    <link href="../resources/css/style.css" rel="stylesheet">
+    <link href="../resources/admindesign/css/helper.css" rel="stylesheet">
+    <link href="../resources/admindesign/css/style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
