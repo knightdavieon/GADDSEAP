@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2018 at 06:13 AM
+-- Generation Time: Nov 12, 2018 at 07:19 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -29,12 +29,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accounts` (
-  `id` text NOT NULL,
-  `username` text,
-  `password` text,
-  `status` text,
+  `account_id` varchar(255) NOT NULL,
+  `account_name` varchar(255) DEFAULT NULL,
+  `account_password` varchar(255) DEFAULT NULL,
+  `account_status` varchar(20) DEFAULT NULL,
   `account_type` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`account_id`, `account_name`, `account_password`, `account_status`, `account_type`) VALUES
+('11122018VE9UVE', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'INACTIVE', 'admin');
 
 -- --------------------------------------------------------
 
@@ -49,6 +56,13 @@ CREATE TABLE `activity_log` (
   `activity` varchar(255) NOT NULL,
   `log_date_time` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `activity_log`
+--
+
+INSERT INTO `activity_log` (`log_id`, `account_id`, `account_name`, `activity`, `log_date_time`) VALUES
+(0, 'SUPER ADMIN', 'KNIGHTDAVEION', 'Logged In Using IP ::1', 'Monday 12th of November 2018 02:09:51 PM');
 
 -- --------------------------------------------------------
 
@@ -132,11 +146,19 @@ INSERT INTO `personal_info` (`id`, `record_id`, `first_name`, `mi`, `last_name`,
 --
 
 CREATE TABLE `user_details` (
-  `id` text NOT NULL,
-  `first_name` text,
-  `last_name` text,
-  `contact` text
+  `account_id` varchar(255) NOT NULL,
+  `user_firstname` varchar(255) DEFAULT NULL,
+  `user_lastname` varchar(255) DEFAULT NULL,
+  `user_contact` varchar(13) DEFAULT NULL,
+  `user_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_details`
+--
+
+INSERT INTO `user_details` (`account_id`, `user_firstname`, `user_lastname`, `user_contact`, `user_status`) VALUES
+('11122018VE9UVE', 'test', 'account', '123123213213', 0);
 
 --
 -- Indexes for dumped tables
