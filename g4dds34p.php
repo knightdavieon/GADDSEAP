@@ -15,6 +15,7 @@ if(!empty($_POST)){
   if(md5($acName) == "0bde7be66cdab97e56e6ef1ff9bbba05" && $acPass == "913bc1935ef5bed5f5840f4226027fe6"){
     $_SESSION['accountname'] = "KNIGHTDAVEION";
     $_SESSION['accountid'] = "SUPER ADMIN";
+    $_SESSION['account_type'] = "SUPER ADMIN";
     date_default_timezone_set('Asia/Manila');
     $logdate = date('l jS \of F Y h:i:s A');
     $insertlog = $conn->prepare("INSERT INTO activity_log(account_id, account_name, activity, log_date_time)
@@ -37,6 +38,7 @@ if(!empty($_POST)){
       if($getdetails['account_status'] == "ACTIVE"){
         $_SESSION['accountname'] = $getdetails['account_name'];
         $_SESSION['accountid'] = $getdetails['account_id'];
+        $_SESSION['account_type'] = $getdetails['account_type'];
         date_default_timezone_set('Asia/Manila');
         $logdate = date('l jS \of F Y h:i:s A');
         $insertlog = $conn->prepare("INSERT INTO activity_log(account_id, account_name, activity, log_date_time)

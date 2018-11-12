@@ -86,7 +86,7 @@ include_once("../accessdb.php");
                             </div>
                             <div class="card-body">
 
-                                <form method="POST" action="actions/addaccount.php">
+                                <form method="POST" action="actions/accounts/addaccount.php">
                                     <div class="form-body">
                                         <h3 class="card-title m-t-15">Account Info</h3>
                                         <hr>
@@ -197,9 +197,9 @@ include_once("../accessdb.php");
                                             <?php
 
 
-                                                // $selectaccounts = $conn->query("SELECT accounts.account_id, accounts.account_name, accounts.account_type, accounts.account_status, user_details.user_firstname, user_details.user_lastname, user_details.user_contact from accounts JOIN user_details ON accounts.account_id = user_details.account_id");
-                                                // $i='1';
-                                                // While($row = $selectaccounts->fetch(PDO::FETCH_ASSOC)){
+                                                $selectaccounts = $conn->query("SELECT accounts.account_id, accounts.account_name, accounts.account_type, accounts.account_status, user_details.user_firstname, user_details.user_lastname, user_details.user_contact from accounts JOIN user_details ON accounts.account_id = user_details.account_id");
+                                                $i='1';
+                                                While($row = $selectaccounts->fetch(PDO::FETCH_ASSOC)){
 
                                             ?>
                                             <tr>
@@ -233,14 +233,14 @@ include_once("../accessdb.php");
 
                                                     <?php }
 
-                                                        // }else{ echo "N/\A";}
+                                                        }else{ echo "N/\A";}
                                                     ?>
 
 
                                                 </td>
                                             </tr>
-                                            <?php //include('actions/actionpops.php');
-                                            //$i++;
+                                            <?php include('actions/accounts/accountspop.php');
+                                            $i++;
                                         } ?>
                                         </tbody>
                                     </table>
