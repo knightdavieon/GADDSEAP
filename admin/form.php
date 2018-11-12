@@ -100,7 +100,7 @@
 
                   </div>
                   <div class="card-body">
-                    <form class="" action="actions/addrecord.php" method="post">
+                    <form class="" action="actions/records/addrecord.php" method="post">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
                           <input required class="form-control" type='text' name="firstname" placeholder="First Name">

@@ -107,7 +107,7 @@ if (!empty($_POST)){
                   <div class="card-body">
 
 
-                    <form class="" action="actions/updaterecord.php<?php ?>" method="post">
+                    <form class="" action="actions/records/updaterecord.php<?php ?>" method="post">
                        <input type="hidden" name="record_id" value="<?php echo $rowpersonal['record_id'];?>">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
