@@ -1,4 +1,5 @@
 <?php
+include("sessionhandler.php");
 include("../accessdb.php");
 
 ?>
@@ -110,7 +111,7 @@ include("../accessdb.php");
                                 ?>
                             </td>
                              <td>   <!-- Delete -->
-                            <button class="btn btn-rounded btn-danger"  href="#<?php echo $i;?>" data-toggle="modal" data-target="#<?php echo $i;?>"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            <button class="btn btn-rounded btn-danger"  href="#deleterecord<?php echo $i;?>" data-toggle="modal" data-target="#deleterecord<?php echo $i;?>"><i class="fa fa-trash" aria-hidden="true"></i></button>
 
 
                             <!-- Edit -->
@@ -119,8 +120,9 @@ include("../accessdb.php");
                               <button class="btn btn-rounded btn-primary" ><i class="fa fa-id-card" aria-hidden="true"></i></button>
                             </form></td>
                                             </tr>
-
-                                           <?php  $i++; } ?>
+                                                  <?php include('actions/records/recordpop.php');
+                                            $i++;
+                                             } ?>
                                         </tbody>
                                     </table>
                                 </div>

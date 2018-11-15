@@ -122,7 +122,7 @@ if (!empty($_POST)){
 
 
 		echo "<script language='JavaScript'>
-						window.location.href='../form';
+						window.location.href='../../form';
 							</SCRIPT>";
 
 

@@ -75,10 +75,34 @@ if (!empty($_POST)){
 		));
 
 
+	$updatefamily = $conn->prepare("UPDATE family_background SET father = :father, father_age = :father_age, father_occupation = :father_occupation, mother = :mother, mother_age = :mother_age, mother_occupation = :mother_occupation, siblings_1 = :siblings_1, 1_age = :1_age, 1_occupation = :1_occupation, siblings_2 = :siblings_2, 2_age = :2_age, 2_occupation = :2_occupation, siblings_3 = :siblings_3, 3_age = :3_age, 3_occupation = :3_occupation, spouse = :spouse, spouse_age = :spouse_age, spouse_occupation = :spouse_occupation WHERE record_id = :id");
+		$updatefamily->execute(array(
+			"id" => $id,
+		    "father" => $father,
+		    "father_age" => $father_age,
+		    "father_occupation" => $father_occupation,
+		    "mother" => $mother,
+		    "mother_age" => $mother_age,
+		    "mother_occupation" => $mother_occupation,
+		    "siblings_1" => $siblings_1,
+		    "1_age" => $age1,
+		    "1_occupation" => $occupation1,
+		    "siblings_2" => $siblings_2,
+		    "2_age" => $age2,
+		    "2_occupation" => $occupation2,
+		    "siblings_3" => $siblings_3,
+		    "3_age" => $age3,
+		    "3_occupation" => $occupation3,
+		    "spouse" => $spouse,
+		    "spouse_age" => $spouse_age,
+		    "spouse_occupation" => $spouse_occupation
+		));
+
+
 		
 
 		echo "<script language='JavaScript'>
-						window.location.href='../studentlist';
+						window.location.href='../../studentlist';
 							</SCRIPT>";
 
 }

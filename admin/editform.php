@@ -281,7 +281,7 @@ if (!empty($_POST)){
 
                         <div class="col-md-6 form-row-padding">
                           <label for="">Purpose</label>
-                           <input type="hidden" name="scholarship" value="">
+                           <input type="hidden" name="scholarship" value="<?php echo $rowpersonal['purpose'] ?>">
                           <div class="btn-group-toggle" data-toggle="buttons">
                             <label class="btn btn-secondary <?php if($rowpersonal['purpose'] == "Scholarship") echo "active";  ?>">
                               <input type="checkbox" name="scholarship" autocomplete="off" value="Scholarship"> Scholarship
@@ -290,7 +290,7 @@ if (!empty($_POST)){
                         </div>
                         <div class="col-md-6 form-row-padding">
                           <label for="">Educational</label>
-                           <input type="hidden" name="educational" value="">
+                           <input type="hidden" name="educational" value="<?php echo $rowpersonal['educational'] ?>">
                           <div class="custom-control custom-radio">
                             <input type="radio" id="customRadio1" name="educational" class="custom-control-input" value="Project" <?php if($rowpersonal['educational'] == "Project"){echo "checked"; } ?>>
                             <label class="custom-control-label" for="customRadio1">Project</label>
