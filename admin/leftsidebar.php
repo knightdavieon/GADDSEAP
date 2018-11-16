@@ -9,6 +9,8 @@
                          <li class="nav-devider"></li>
                  <li> <a href="studentlist" aria-expanded="false"><i class="fa fa-list"></i><span class="hide-menu">Student List </span></a>
                 </li>
+                <li> <a href="reports" aria-expanded="false"><i class="fa fa-file"></i><span class="hide-menu">Reports </span></a>
+               </li>
                 <li class="nav-devider"></li>
                 <li class="nav-label">Settings</li>
                 <li> <a href="accounts" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Accounts </span></a>

@@ -5,7 +5,7 @@ session_start();
 if (!empty($_POST)){
   $selectedid = $_POST['selectedid'];
 }
- $selectpersonal = $conn->query("SELECT * FROM personal_info JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid'");
+ $selectp ersonal = $conn->query("SELECT * FROM personal_info JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid'");
  $rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
@@ -108,6 +108,19 @@ if (!empty($_POST)){
 
 
                     <form class="" action="actions/records/updaterecord.php<?php ?>" method="post">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="card" style="width: 16rem;">
+                            <a href="#" data-toggle="modal" data-target="#updateimage"><img class="card-img-top" src="../resources/images/pictures/<?php echo $rowpersonal['image']; ?>" alt="Card image cap" aria-describedby="emailHelp"></a>
+                            <div class="card-body">
+                              <small id="emailHelp" class="form-text text-muted">Click Image To Update Photo.</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+
+                        </div>
+                      </div>
                        <input type="hidden" name="record_id" value="<?php echo $rowpersonal['record_id'];?>">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
@@ -198,7 +211,7 @@ if (!empty($_POST)){
                       </div>
                     </div>
                     <br>
-                  
+
 
                     <div class="row">
                       <div class="col-md-6 form-row-padding">
@@ -208,7 +221,7 @@ if (!empty($_POST)){
                         <input class="form-control" type="text" value="<?php echo $rowpersonal['father_age']?>" name="father_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" value="<?php echo $rowpersonal['father_occupation']?>" name="father_occupation" placeholder="Occupation"> 
+                        <input class="form-control" type="text" value="<?php echo $rowpersonal['father_occupation']?>" name="father_occupation" placeholder="Occupation">
                       </div>
                     </div>
 
@@ -220,7 +233,7 @@ if (!empty($_POST)){
                         <input class="form-control" type="text" value="<?php echo $rowpersonal['mother_age']?>" name="mother_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" value="<?php echo $rowpersonal['mother_occupation']?>" name="mother_occupation" placeholder="Occupation"> 
+                        <input class="form-control" type="text" value="<?php echo $rowpersonal['mother_occupation']?>" name="mother_occupation" placeholder="Occupation">
                       </div>
                     </div>
 
@@ -233,7 +246,7 @@ if (!empty($_POST)){
                         <input class="form-control" type="text" value="<?php echo $rowpersonal['1_age']?>" name="1_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" value="<?php echo $rowpersonal['1_occupation']?>" name="1_occupation" placeholder="Occupation"> 
+                        <input class="form-control" type="text" value="<?php echo $rowpersonal['1_occupation']?>" name="1_occupation" placeholder="Occupation">
                       </div>
                     </div>
 
@@ -246,7 +259,7 @@ if (!empty($_POST)){
                         <input class="form-control" type="text" value="<?php echo $rowpersonal['2_age']?>" name="2_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" value="<?php echo $rowpersonal['2_occupation']?>" name="2_occupation" placeholder="Occupation"> 
+                        <input class="form-control" type="text" value="<?php echo $rowpersonal['2_occupation']?>" name="2_occupation" placeholder="Occupation">
                       </div>
                     </div>
 
@@ -259,7 +272,7 @@ if (!empty($_POST)){
                         <input class="form-control" type="text" value="<?php echo $rowpersonal['3_age']?>" name="3_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" value="<?php echo $rowpersonal['3_occupation']?>" name="3_occupation" placeholder="Occupation"> 
+                        <input class="form-control" type="text" value="<?php echo $rowpersonal['3_occupation']?>" name="3_occupation" placeholder="Occupation">
                       </div>
                     </div>
 
@@ -272,7 +285,7 @@ if (!empty($_POST)){
                         <input class="form-control" type="text" value="<?php echo $rowpersonal['spouse_age']?>" name="spouse_age" placeholder="Age">
                       </div>
                       <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" value="<?php echo $rowpersonal['spouse_occupation']?>" name="spouse_occupation" placeholder="Occupation"> 
+                        <input class="form-control" type="text" value="<?php echo $rowpersonal['spouse_occupation']?>" name="spouse_occupation" placeholder="Occupation">
                       </div>
                     </div>
 
@@ -313,7 +326,7 @@ if (!empty($_POST)){
                           </div>
                         </div>
                       </div>
-                      
+
                       <hr />
                       <div class="row">
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -364,6 +377,7 @@ if (!empty($_POST)){
         formatDate:'Y/m/d'
 
     });
+
        </script>
 
 
@@ -393,3 +407,40 @@ if (!empty($_POST)){
         </div>
       </div>
     </div>
+
+    <div class="modal "  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="updateimage">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action=" " method="post" enctype="multipart/form-data">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+              <img class="card-img-top" src="../resources/images/pictures/<?php echo $rowpersonal["image"];?>" alt="Card image cap" id="blah" >
+              <input type="file" name="fileToUpload" class="form-control form-control-danger" id="imgInp" required title="select image" >
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Upload</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#imgInp").change(function(){
+      readURL(this);
+    });
+    </script>

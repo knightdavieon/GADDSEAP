@@ -1,6 +1,6 @@
 <?php
-//include("sessionhandler.php");
-//include("../accessdb.php");
+include("sessionhandler.php");
+include("../accessdb.php");
 
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 
   <title>GADDSEAP</title>
   <!-- Bootstrap Core CSS -->
-   <link rel="stylesheet" type="text/css" href="../resources/css/jquery.datetimepicker.css"/>
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.datetimepicker.css"/>
   <link href="../resources/admindesign/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="../resources/admindesign/css/helper.css" rel="stylesheet">
@@ -85,6 +85,9 @@
               <div class="col-md-12">
                 <div class="card p-30">
                   <div class="card-title">
+                    <div>
+                      <?php if(isset($_SESSION['recordlistnotifications'])){echo $_SESSION['recordlistnotifications']; unset($_SESSION['recordlistnotifications']);} ?>
+                    </div>
 
                     <div class="row" style="text-align:center;">
                       <div class="col-md-4">
@@ -100,7 +103,20 @@
 
                   </div>
                   <div class="card-body">
-                    <form class="" action="actions/records/addrecord.php" method="post">
+                    <form action="actions/records/addrecord.php" method="post" enctype="multipart/form-data">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="card" style="width: 16rem;">
+                            <img class="card-img-top" src="../resources/images/ImageLogo.png" alt="Card image cap" id="blah" >
+                            <div class="card-body">
+                              <input type="file" name="fileToUpload" class="form-control form-control-danger" id="imgInp" required title="select image" >
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+
+                        </div>
+                      </div>
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
                           <input required class="form-control" type='text' name="firstname" placeholder="First Name">
@@ -153,8 +169,8 @@
                           <input class="form-control" type='text' name="year" placeholder="Year">
                         </div>
                         <div class="col-md-4 form-row-padding">
-                         <input class="form-control" type='text' name="citizenship" placeholder="Citizenship" value="Filipino">
-                       </div>
+                          <input class="form-control" type='text' name="citizenship" placeholder="Citizenship" value="Filipino">
+                        </div>
 
                       </div>
                       <div class="row">
@@ -166,7 +182,7 @@
                         </div>
                         <div class="col-md-2 form-row-padding">
                           <select class="form-control" name="sex">
-                             <option value=" ">-- Sex --</option>
+                            <option value=" ">-- Sex --</option>
                             <option value="M">M</option>
                             <option value="F">F</option>
                           </select>
@@ -177,96 +193,96 @@
 
                       </div>
 
-<br>
- <div class="row" style="text-align:center;">
-                      <div class="col-md-4">
-                        <hr />
+                      <br>
+                      <div class="row" style="text-align:center;">
+                        <div class="col-md-4">
+                          <hr />
+                        </div>
+                        <div class="col-md-4">
+                          <h4>Family Background</h4>
+                        </div>
+                        <div class="col-md-4">
+                          <hr />
+                        </div>
                       </div>
-                      <div class="col-md-4">
-                        <h4>Family Background</h4>
-                      </div>
-                      <div class="col-md-4">
-                        <hr />
-                      </div>
-                    </div>
-                    <br>
+                      <br>
 
 
-                    <div class="row">
-                      <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="father" placeholder="Name of Father">
+                      <div class="row">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type="text" name="father" placeholder="Name of Father">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="father_age" placeholder="Age">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="father_occupation" placeholder="Occupation">
+                        </div>
                       </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="father_age" placeholder="Age">
-                      </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="father_occupation" placeholder="Occupation"> 
-                      </div>
-                    </div>
 
-                    <div class="row">
-                      <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="mother" placeholder="Name of Mother">
+                      <div class="row">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type="text" name="mother" placeholder="Name of Mother">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="mother_age" placeholder="Age">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="mother_occupation" placeholder="Occupation">
+                        </div>
                       </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="mother_age" placeholder="Age">
-                      </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="mother_occupation" placeholder="Occupation"> 
-                      </div>
-                    </div>
-
-
-                     <div class="row">
-                      <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="siblings_1" placeholder="Name of Siblings">
-                      </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="1_age" placeholder="Age">
-                      </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="1_occupation" placeholder="Occupation"> 
-                      </div>
-                    </div>
 
 
-                     <div class="row">
-                      <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="siblings_2" placeholder="Name of Siblings">
+                      <div class="row">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type="text" name="siblings_1" placeholder="Name of Siblings">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="1_age" placeholder="Age">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="1_occupation" placeholder="Occupation">
+                        </div>
                       </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="2_age" placeholder="Age">
-                      </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="2_occupation" placeholder="Occupation"> 
-                      </div>
-                    </div>
 
 
-                     <div class="row">
-                      <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="siblings_3" placeholder="Name of Siblings">
+                      <div class="row">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type="text" name="siblings_2" placeholder="Name of Siblings">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="2_age" placeholder="Age">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="2_occupation" placeholder="Occupation">
+                        </div>
                       </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="3_age" placeholder="Age">
-                      </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="3_occupation" placeholder="Occupation"> 
-                      </div>
-                    </div>
 
 
-                     <div class="row">
-                      <div class="col-md-6 form-row-padding">
-                        <input class="form-control" type="text" name="spouse" placeholder="Name of Spouse (if any)">
+                      <div class="row">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type="text" name="siblings_3" placeholder="Name of Siblings">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="3_age" placeholder="Age">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="3_occupation" placeholder="Occupation">
+                        </div>
                       </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="spouse_age" placeholder="Age">
+
+
+                      <div class="row">
+                        <div class="col-md-6 form-row-padding">
+                          <input class="form-control" type="text" name="spouse" placeholder="Name of Spouse (if any)">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="spouse_age" placeholder="Age">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type="text" name="spouse_occupation" placeholder="Occupation">
+                        </div>
                       </div>
-                      <div class="col-md-3 form-row-padding">
-                        <input class="form-control" type="text" name="spouse_occupation" placeholder="Occupation"> 
-                      </div>
-                    </div>
 
 
                       <div class="row">
@@ -305,7 +321,7 @@
                           </div>
                         </div>
                       </div>
-                      
+
                       <hr />
                       <div class="row">
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -346,17 +362,33 @@
       <script src="../resources/admindesign/js/custom.min.js"></script>
       <script src="../resources/admindesign/js/lib/datatables/datatables.min.js"></script>
       <script src="../resources/admindesign/js/lib/datatables/datatables2-init.js"></script>
-       <script src="../resources/js/jquery.datetimepicker.full.js"></script>
+      <script src="../resources/js/jquery.datetimepicker.full.js"></script>
 
-       <script>
-         $('#datetimepicker1').datetimepicker({
+      <script>
+      $('#datetimepicker1').datetimepicker({
         lang:'en',
         timepicker:false,
         format:'d/m/Y',
         formatDate:'Y/m/d'
 
-    });
-       </script>
+      });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+
+      $("#imgInp").change(function(){
+        readURL(this);
+      });
+      </script>
 
 
 
