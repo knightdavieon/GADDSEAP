@@ -5,7 +5,7 @@ session_start();
 if (!empty($_POST)){
   $selectedid = $_POST['selectedid'];
 }
- $selectp ersonal = $conn->query("SELECT * FROM personal_info JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid'");
+ $selectpersonal = $conn->query("SELECT * FROM personal_info JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid'");
  $rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
