@@ -46,7 +46,7 @@ session_start();
 
 
 		echo "<script language='JavaScript'>
-						window.location.href='../accounts';
+						window.location.href='../../accounts';
 							</SCRIPT>";
 			}else{
 				$_SESSION['accountsNotifications'] = "<div class='alert alert-danger' role='alert'><strong>Error!</strong> Password doesnt match!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
@@ -55,7 +55,7 @@ session_start();
 
 
 		echo "<script language='JavaScript'>
-						window.location.href='../accounts';
+						window.location.href='../../accounts';
 							</SCRIPT>";
 			}
 
