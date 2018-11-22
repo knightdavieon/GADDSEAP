@@ -10,7 +10,9 @@ if (!empty($_POST)){
 	$mi = $_POST['mi'];
 	$lastname = $_POST['lastname'];
 	$suffix = $_POST['suffix'];
-	$address = $_POST['address'];
+	$addbrgy = $_POST['addBrgy'];
+	$addmun = $_POST['addMun'];
+	$addprov = $_POST['addProv'];
 	$civilstatus = $_POST['civilstatus'];
 	$school = $_POST['school'];
 	$birthdate = $_POST['birthdate'];
@@ -51,14 +53,16 @@ if (!empty($_POST)){
 
 
 
-	$updatepersonal = $conn->prepare("UPDATE personal_info SET first_name = :first_name, mi = :mi, last_name = :last_name, ex = :ex, address = :address, civil_status = :civil_status, school = :school, birthdate = :birthdate, course = :course, year = :year, citizenship = :citizenship, contact_no = :contact_no, age = :age, sex = :sex, religion = :religion, purpose = :purpose, educational = :educational WHERE record_id = :id");
+	$updatepersonal = $conn->prepare("UPDATE personal_info SET first_name = :first_name, mi = :mi, last_name = :last_name, ex = :ex, address_brgy = :addressbrgy, address_mun = :addressmun, address_prov = :addressprov, civil_status = :civil_status, school = :school, birthdate = :birthdate, course = :course, year = :year, citizenship = :citizenship, contact_no = :contact_no, age = :age, sex = :sex, religion = :religion, purpose = :purpose, educational = :educational WHERE record_id = :id");
 		$updatepersonal->execute(array(
 			"id"=>$id,
 		    "first_name" => $firstname,
 		    "mi" => $mi,
 		    "last_name" => $lastname,
 		    "ex" => $suffix,
-		    "address" => $address,
+				"addressbrgy" => $addbrgy,
+				"addressmun" => $addmun,
+				"addressprov" => $addprov,
 		    "civil_status" => $civilstatus,
 		    "school" => $school,
 		    "birthdate" => $birthdate,
@@ -71,7 +75,7 @@ if (!empty($_POST)){
 		    "religion" => $religion,
 		   "purpose" => $scholarship,
 		    "educational" => $educational
-		  
+
 		));
 
 
@@ -99,11 +103,14 @@ if (!empty($_POST)){
 		));
 
 
-		
 
-		echo "<script language='JavaScript'>
-						window.location.href='../../studentlist';
-							</SCRIPT>";
+
+		$_SESSION['recordlistnotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> Record Updated!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+					<span aria-hidden='true'>&times;</span>
+				</button></div>";
+				echo "<script language='JavaScript'>
+		window.location.href='../../studentlist';
+			</SCRIPT>";
 
 }
 

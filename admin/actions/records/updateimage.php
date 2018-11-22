@@ -1,4 +1,6 @@
 <?php
+include_once("../../../accessdb.php");
+session_start();
 
 $target_dir = "../../../resources/images/pictures/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -7,6 +9,7 @@ $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
+
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
   if($check !== false) {
     //echo "File is an image - " . $check["mime"] . ".";
@@ -23,16 +26,18 @@ if(isset($_POST["submit"])) {
   }
 }
 // Check if file already exists
-if (file_exists($target_file)) {
-  //echo "Sorry, file already exists.";
-  $_SESSION['recordlistnotifications'] = "<div class='alert alert-danger' role='alert'><strong>Error!</strong> Sorry, File alreay exist!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-  <span aria-hidden='true'>&times;</span>
-  </button></div>";
-  //  echo "<script language='JavaScript'>
-  //                        window.location.href='../accommodations';
-  //                           </SCRIPT>";
-  $uploadOk = 0;
-}
+
+// if (file_exists($target_file)) {
+//   //echo "Sorry, file already exists.";
+//   $_SESSION['recordlistnotifications'] = "<div class='alert alert-danger' role='alert'><strong>Error!</strong> Sorry, File alreay exist!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+//   <span aria-hidden='true'>&times;</span>
+//   </button></div>";
+//   //  echo "<script language='JavaScript'>
+//   //                        window.location.href='../accommodations';
+//   //                           </SCRIPT>";
+//   $uploadOk = 0;
+// }
+
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 1000000000) {
   //echo "Sorry, your file is too large.";
@@ -63,19 +68,21 @@ if ($uploadOk == 0) {
   <span aria-hidden='true'>&times;</span>
   </button></div>";
   echo "<script language='JavaScript'>
-  window.location.href='../../form';
+  window.location.href='../../studentlist';
   </SCRIPT>";
 } else {
+  $id = $_POST['idtoupdateimage'];
   $temp = explode(".", $recordimage);
-  $newfilename = $idcode . '.' . end($temp);
+  $newfilename = $id . '.' . end($temp);
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir . $newfilename)) {
     // echo "The file ". $newfilename. " has been uploaded.";
-    $insertpersonal = $conn->prepare("INSERT INTO personal_info(record_id, first_name, mi, last_name, ex, address, civil_status, school, birthdate, course, year, citizenship, contact_no, age, sex, religion, purpose, educational, record_date, image)
-    VALUES(:record_id, :first_name, :mi, :last_name, :ex, :address, :civil_status, :school, :birthdate, :course, :year, :citizenship, :contact_no, :age, :sex, :religion, :purpose, :educational, :record_date, :img)");
-    $insertpersonal->execute(array(
-      "record_id" => $idcode,
+    $updatepersonal = $conn->prepare("UPDATE personal_info SET image = :img WHERE record_id = :id");
+  		$updatepersonal->execute(array(
+  			"id"=>$id,
+        "img" => $newfilename
+  		));
 
-    ));
+
 
 
     // date_default_timezone_set('Asia/Manila');
@@ -89,11 +96,11 @@ if ($uploadOk == 0) {
     // "logtimedate" => $logdate
     // ));
 
-    $_SESSION['recordlistnotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> The file". basename( $_FILES["fileToUpload"]["name"])." has been uploaded<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+    $_SESSION['recordlistnotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> Image Updated. file". basename( $_FILES["fileToUpload"]["name"])." has been uploaded<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
     <span aria-hidden='true'>&times;</span>
     </button></div>";
     echo "<script language='JavaScript'>
-    window.location.href='../../form';
+    window.location.href='../../studentlist';
     </SCRIPT>";
   } else {
     //echo "Sorry, there was an error uploading your file.";
@@ -101,7 +108,7 @@ if ($uploadOk == 0) {
     <span aria-hidden='true'>&times;</span>
     </button></div>";
     echo "<script language='JavaScript'>
-    window.location.href='../../form';
+    window.location.href='../../studentlist';
     </SCRIPT>";
   }
 }

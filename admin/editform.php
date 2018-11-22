@@ -2,8 +2,15 @@
 include_once("../accessdb.php");
 session_start();
 
+if($_POST['selectedid'] == NULL || $_POST['selectedid'] == " "){
+  echo ("<script language='JavaScript'>
+  window.location.href='./studentlist';
+  </SCRIPT>");
+}
+
 if (!empty($_POST)){
   $selectedid = $_POST['selectedid'];
+  $_SESSION['selectedid'] = $selectedid;
 }
  $selectpersonal = $conn->query("SELECT * FROM personal_info JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid'");
  $rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC);
@@ -107,7 +114,7 @@ if (!empty($_POST)){
                   <div class="card-body">
 
 
-                    <form class="" action="actions/records/updaterecord.php<?php ?>" method="post">
+
                       <div class="row">
                         <div class="col-md-5">
                           <div class="card" style="width: 16rem;">
@@ -121,6 +128,7 @@ if (!empty($_POST)){
 
                         </div>
                       </div>
+                      <form class="" action="actions/records/updaterecord.php<?php ?>" method="post">
                        <input type="hidden" name="record_id" value="<?php echo $rowpersonal['record_id'];?>">
                       <div class="row">
                         <div class="col-md-5 form-row-padding">
@@ -138,8 +146,14 @@ if (!empty($_POST)){
 
                       </div>
                       <div class="row">
-                        <div class="col-md-8 form-row-padding">
-                          <input class="form-control" type='text' value="<?php echo $rowpersonal['address']?>" name="address" placeholder="Address">
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type='text' name="addBrgy" placeholder="Brgy" value="<?php echo $rowpersonal['address_brgy'];?>">
+                        </div>
+                        <div class="col-md-2 form-row-padding">
+                          <input class="form-control" type='text' name="addMun" placeholder="Municipality" value="<?php echo $rowpersonal['address_mun'];?>">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type='text' name="addProv" placeholder="Province" value="<?php echo $rowpersonal['address_prov'];?>">
                         </div>
                         <div class="col-md-4 form-row-padding">
                           <select class="form-control" name="civilstatus">
@@ -411,10 +425,11 @@ if (!empty($_POST)){
     <div class="modal "  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="updateimage">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <form action=" " method="post" enctype="multipart/form-data">
+          <form action="actions/records/updateimage.php" method="post" enctype="multipart/form-data">
             <div class="modal-header">
             </div>
             <div class="modal-body">
+              <input type="hidden" name="idtoupdateimage" value="<?php echo $selectedid;?>">
               <img class="card-img-top" src="../resources/images/pictures/<?php echo $rowpersonal["image"];?>" alt="Card image cap" id="blah" >
               <input type="file" name="fileToUpload" class="form-control form-control-danger" id="imgInp" required title="select image" >
             </div>

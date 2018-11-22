@@ -2,6 +2,8 @@
 include("sessionhandler.php");
 include("../accessdb.php");
 
+unset($_SESSION['selectedid']);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +70,7 @@ include("../accessdb.php");
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
-        
+
 
             <div class="container-fluid">
                 <!-- Start Page Content -->
@@ -76,6 +78,9 @@ include("../accessdb.php");
                     <div class="col-md-12">
                         <div class="card p-30">
                             <div class="card-title">
+                              <div>
+                                <?php if(isset($_SESSION['recordlistnotifications'])){echo $_SESSION['recordlistnotifications']; unset($_SESSION['recordlistnotifications']);} ?>
+                              </div>
                                   <a class="btn btn-primary" href="form"><i class="fa fa-plus"></i> ADD</a>
 
                             </div>
@@ -85,7 +90,9 @@ include("../accessdb.php");
                                         <thead>
                                             <tr>
                                                 <td>Name</td>
-                                                <td>Address</td>
+                                                <td>Brgy</td>
+                                                <td>Municipality</td>
+                                                <td>Province</td>
                                                 <td>School</td>
                                                 <td>Course</td>
                                                 <td>Contact No</td>
@@ -94,7 +101,7 @@ include("../accessdb.php");
                                         </thead>
                                         <tbody>
                                             <?php
-                                               
+
                       $selectpersonal = $conn->query("SELECT * FROM personal_info");
                       $i='1';
                       While($rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC)){
@@ -102,7 +109,9 @@ include("../accessdb.php");
                                             <tr>
 
                             <td><?php echo $rowpersonal['first_name'];?><?php echo " "?><?php echo $rowpersonal['mi']; ?><?php echo " "?><?php echo $rowpersonal['last_name'];?><?php echo " "?><?php  echo $rowpersonal['ex']; ?></td>
-                            <td><?php echo $rowpersonal['address']; ?></td>
+                            <td><?php echo $rowpersonal['address_brgy']; ?></td>
+                            <td><?php echo $rowpersonal['address_mun']; ?></td>
+                            <td><?php echo $rowpersonal['address_prov']; ?></td>
                             <td><?php echo $rowpersonal['school']; ?></td>
                             <td><?php echo $rowpersonal['course']; ?></td>
                             <td><?php echo $rowpersonal['contact_no']; ?>
