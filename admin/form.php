@@ -133,8 +133,14 @@ include("../accessdb.php");
 
                       </div>
                       <div class="row">
-                        <div class="col-md-8 form-row-padding">
-                          <input class="form-control" type='text' name="address" placeholder="Address">
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type='text' name="addBrgy" placeholder="Brgy">
+                        </div>
+                        <div class="col-md-2 form-row-padding">
+                          <input class="form-control" type='text' name="addMun" placeholder="Municipality">
+                        </div>
+                        <div class="col-md-3 form-row-padding">
+                          <input class="form-control" type='text' name="addProv" placeholder="Province">
                         </div>
                         <div class="col-md-4 form-row-padding">
                           <select class="form-control" name="civilstatus">

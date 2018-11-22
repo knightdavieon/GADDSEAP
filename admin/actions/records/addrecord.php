@@ -9,7 +9,9 @@ if (!empty($_POST)){
 	$mi = $_POST['mi'];
 	$lastname = $_POST['lastname'];
 	$suffix = $_POST['suffix'];
-	$address = $_POST['address'];
+	$addbrgy = $_POST['addBrgy'];
+	$addmun = $_POST['addMun'];
+	$addprov = $_POST['addProv'];
 	$civilstatus = $_POST['civilstatus'];
 	$school = $_POST['school'];
 	$birthdate = $_POST['birthdate'];
@@ -138,15 +140,17 @@ if (!empty($_POST)){
 			$newfilename = $idcode . '.' . end($temp);
 			if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir . $newfilename)) {
 				// echo "The file ". $newfilename. " has been uploaded.";
-				$insertpersonal = $conn->prepare("INSERT INTO personal_info(record_id, first_name, mi, last_name, ex, address, civil_status, school, birthdate, course, year, citizenship, contact_no, age, sex, religion, purpose, educational, record_date, image)
-				VALUES(:record_id, :first_name, :mi, :last_name, :ex, :address, :civil_status, :school, :birthdate, :course, :year, :citizenship, :contact_no, :age, :sex, :religion, :purpose, :educational, :record_date, :img)");
+				$insertpersonal = $conn->prepare("INSERT INTO personal_info(record_id, first_name, mi, last_name, ex, address_brgy, address_mun, address_prov, civil_status, school, birthdate, course, year, citizenship, contact_no, age, sex, religion, purpose, educational, record_date, image)
+				VALUES(:record_id, :first_name, :mi, :last_name, :ex, :addressbrgy, :addressmun, :addressprov, :civil_status, :school, :birthdate, :course, :year, :citizenship, :contact_no, :age, :sex, :religion, :purpose, :educational, :record_date, :img)");
 				$insertpersonal->execute(array(
 					"record_id" => $idcode,
 					"first_name" => $firstname,
 					"mi" => $mi,
 					"last_name" => $lastname,
 					"ex" => $suffix,
-					"address" => $address,
+					"addressbrgy" => $addbrgy,
+					"addressmun" => $addmun,
+					"addressprov" => $addprov,
 					"civil_status" => $civilstatus,
 					"school" => $school,
 					"birthdate" => $birthdate,

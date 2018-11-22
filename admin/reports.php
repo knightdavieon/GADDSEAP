@@ -58,11 +58,11 @@ include("../accessdb.php");
             <!-- Bread crumb -->
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Dashboard</h3> </div>
+                    <h3 class="text-primary">Reports</h3> </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item active">Reports</li>
                     </ol>
                 </div>
             </div>
@@ -75,14 +75,11 @@ include("../accessdb.php");
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-users f-s-60 color-primary"></i></span>
+                                    <span><i class="fa fa-exclamation f-s-60 color-primary"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2><?php
-                                      $selectchecked = $conn->query("SELECT count(*) FROM personal_info");
-                                      $number_of_rows3 = $selectchecked->fetchColumn();
 
-                                      echo $number_of_rows3;
                                     ?></h2>
                                     <p class="m-b-0">Number of Students</p>
                                 </div>
@@ -93,17 +90,13 @@ include("../accessdb.php");
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-building f-s-60 color-green"></i></span>
+                                    <span><i class="fa fa-book f-s-60 color-green"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2><?php
-                                    $selectchecked = $conn->query("SELECT count(DISTINCT school) FROM personal_info");
-                                    $number_of_rows3 = $selectchecked->fetchColumn();
-
-                                    echo $number_of_rows3;
 
                                     ?></h2>
-                                    <p class="m-b-0">School</p>
+                                    <p class="m-b-0">Pending</p>
                                 </div>
                             </div>
                         </div>
@@ -112,70 +105,21 @@ include("../accessdb.php");
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-map-marker f-s-60 color-warning"></i></span>
+                                    <span><i class="fa fa-check f-s-60 color-warning"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
                                     <h2><?php
-                                    $selectchecked = $conn->query("SELECT count(DISTINCT school) FROM personal_info");
-                                    $number_of_rows3 = $selectchecked->fetchColumn();
-
-                                    echo $number_of_rows3;
+                                    // $selectchecked = $conn->query("SELECT count(*) FROM reservations where reservation_status = 'CHECKED IN'");
+                                    // $number_of_rows3 = $selectchecked->fetchColumn();
+                                    //
+                                    // echo $number_of_rows3;
 
                                     ?></h2>
-                                    <p class="m-b-0">Municipality</p>
+                                    <p class="m-b-0">Pending</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End PAge Content -->
-            </div>
-
-            <div class="container-fluid">
-                <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card p-30">
-                            <div class="card-title">
-                                <h4>Activity Log</h4>
-
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="myTable2" class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <td>Id</td>
-                                                <td>Account Id</td>
-                                                <td>Account Name</td>
-                                                <td>Activity</td>
-                                                <td>Date/Time</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-
-
-                                                $selectlogs = $conn->query("SELECT * FROM activity_log ORDER BY log_id desc");
-                                                $i='1';
-                                                While($row = $selectlogs->fetch(PDO::FETCH_ASSOC)){
-
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $row['log_id']; ?></td>
-                                                <td><?php echo $row['account_id']; ?></td>
-                                                <td><?php echo $row['account_name']; ?></td>
-                                                <td><?php echo $row['activity']; ?></td>
-                                                <td><?php echo $row['log_date_time']; ?></td>
-                                            </tr>
-                                            <?php $i++; } ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
                 <!-- End PAge Content -->
             </div>
