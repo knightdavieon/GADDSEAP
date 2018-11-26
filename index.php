@@ -88,8 +88,7 @@
         <div class="carousel-item active">
           <div class="carousel-caption">
             <hgroup>
-              <h1>GOV. ATTY. AMOR D. DELOSO SCHOLARSHIP AND EDUCATIONAL ASSISTANCE PROGRAM</h1>
-              <h3>(GADDSEAP)</h3>
+              <h1>ERICKAMHER MONTOYA PAULE</h1>
               <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW</a> -->
             </hgroup>
           </div>
