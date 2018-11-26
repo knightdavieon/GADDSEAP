@@ -63,6 +63,30 @@
     text-align: center;
     font-weight: 350;
   }
+  .parallax {
+    /* The image used */
+
+
+    /* Set a specific height */
+    background-image: url(resources/images/travel.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    /* Create the parallax scrolling effect */
+
+  }
+  .blackoverlay{
+    background-color: rgba(0,0,0,0.5);
+    padding-right: 0px;
+    padding-left:0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .rem-padding{
+    padding: 0;
+  }
 
 
   </style>
@@ -150,37 +174,40 @@
 
   <!-- start of school logos -->
 
-  <div class="container-fluid background-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="text-center sub-title">Credited Schools</h3>
-          <div class="media-logos">
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/columban.png" alt="columban">
-            </a>
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/lyceum.png" alt="columban">
-            </a>
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/macsat.png" alt="columban">
-            </a>
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/mmc.png" alt="columban">
-            </a>
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/nzc.png" alt="columban">
-            </a>
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/pcb.png" alt="columban">
-            </a>
-            <a target="_blank"  rel="nofollow">
-              <img class="logo" src="resources/images/collegelogo/prmsu.png" alt="columban">
-            </a>
+  <div class="container-fluid rem-padding parallax">
+    <div class="container-fluid blackoverlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="text-center sub-title">Credited Schools</h3>
+            <div class="media-logos">
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/columban.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/lyceum.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/macsat.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/mmc.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/nzc.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/pcb.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/prmsu.png" alt="columban">
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
 
   </div>
 
