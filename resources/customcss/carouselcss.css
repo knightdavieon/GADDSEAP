@@ -114,7 +114,9 @@
 /*       Slides backgrounds     */
 .fade-carousel .carousel-inner .slide-1,
 .fade-carousel .carousel-inner .slide-2,
-.fade-carousel .carousel-inner .slide-3 {
+.fade-carousel .carousel-inner .slide-3,
+.fade-carousel .carousel-inner .slide-4,
+.fade-carousel .carousel-inner .slide-5 {
     height: 100vh;
     background-size: cover;
     background-position: center center;
@@ -124,10 +126,16 @@
     background-image: url(../images/carousel/img-01.jpg);
 }
 .fade-carousel .carousel-inner .slide-2 {
-    background-image: url(../images/carousel/img-02.jpg);
+    background-image: url(../images/carousel/columban.jpg);
 }
 .fade-carousel .carousel-inner .slide-3 {
-    background-image: url(../images/carousel/img-04.jpg);
+    background-image: url(../images/carousel/lyceum.jpg);
+}
+.fade-carousel .carousel-inner .slide-4 {
+    background-image: url(../images/carousel/macsat.jpg);
+}
+.fade-carousel .carousel-inner .slide-5 {
+    background-image: url(../images/carousel/rmcc.jpg);
 }
 
 .btn-car{

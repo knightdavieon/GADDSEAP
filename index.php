@@ -78,7 +78,7 @@
 
   }
   .blackoverlay{
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.9);
     padding-right: 0px;
     padding-left:0px;
     padding-top: 60px;
@@ -103,6 +103,8 @@
         <li data-target="#kni-carousel" data-slide-to="0" class="active"></li>
         <li data-target="#kni-carousel" data-slide-to="1"></li>
         <li data-target="#kni-carousel" data-slide-to="2"></li>
+        <li data-target="#kni-carousel" data-slide-to="3"></li>
+        <li data-target="#kni-carousel" data-slide-to="4"></li>
       </ol>
 
       <!-- Content -->
@@ -125,8 +127,8 @@
         <div class="carousel-item">
           <div class="carousel-caption">
             <hgroup>
-              <h1>Some advertising</h1>
-              <h3>Statement here</h3>
+              <h1></h1>
+              <h3></h3>
               <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW</a> -->
             </hgroup>
           </div>
@@ -138,14 +140,41 @@
         <div class="carousel-item">
           <div class="carousel-caption">
             <hgroup>
-              <h1>Some advertising</h1>
-              <h3>Statement here</h3>
+              <h1></h1>
+              <h3></h3>
               <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW</a> -->
             </hgroup>
           </div>
           <div class="overlay"></div>
           <div class="slide-3"></div>
         </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <hgroup>
+              <h1></h1>
+              <h3></h3>
+              <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW</a> -->
+            </hgroup>
+          </div>
+          <div class="overlay"></div>
+          <div class="slide-4"></div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+          <div class="carousel-caption">
+            <hgroup>
+              <h1></h1>
+              <h3></h3>
+              <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW</a> -->
+            </hgroup>
+          </div>
+          <div class="overlay"></div>
+          <div class="slide-5"></div>
+        </div>
+
       </div>
     </div>
   </div>
