@@ -73,7 +73,7 @@ include_once("../accessdb.php");
             <!-- End Bread crumb -->
 
             <div>
-                <?php //if(isset($_SESSION['accountsNotifications'])){echo $_SESSION['accountsNotifications']; unset($_SESSION['accountsNotifications']);} ?>
+                <?php if(isset($_SESSION['accountsNotifications'])){echo $_SESSION['accountsNotifications']; unset($_SESSION['accountsNotifications']);} ?>
             </div>
             <!-- Container fluid  -->
             <div class="container-fluid" style="margin:0; padding-left: 10px;">

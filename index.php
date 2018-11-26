@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="resources/Font-Awesome-v5/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="resources/customcss/navbar.css">
   <link rel="stylesheet" href="resources/customcss/carouselcss.css">
+  <link rel="stylesheet" href="resources/customcss/schoollogo.css">
   <script src="resources/dist/js/jquery-3.3.1.min.js"></script>
   <script src="resources/dist/js/bootstrap.min.js"></script>
   <script src="resources/dist/js/popper.min.js"></script>
@@ -62,6 +63,7 @@
     text-align: center;
     font-weight: 350;
   }
+
 
   </style>
 </head>
@@ -145,6 +147,45 @@
     </div>
   </div>
   <!-- end of mission vision -->
+
+  <!-- start of school logos -->
+
+  <div class="container-fluid background-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center sub-title">Credited Schools</h3>
+          <div class="media-logos">
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/columban.png" alt="columban">
+            </a>
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/lyceum.png" alt="columban">
+            </a>
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/macsat.png" alt="columban">
+            </a>
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/mmc.png" alt="columban">
+            </a>
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/nzc.png" alt="columban">
+            </a>
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/pcb.png" alt="columban">
+            </a>
+            <a target="_blank"  rel="nofollow">
+              <img class="logo" src="resources/images/collegelogo/prmsu.png" alt="columban">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- end of school logos -->
+
   <!-- start footer -->
   <?php include('footer.php'); ?>
 </body>

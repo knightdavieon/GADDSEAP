@@ -103,7 +103,16 @@ if (!empty($_POST)){
 		));
 
 
-
+		date_default_timezone_set('Asia/Manila');
+    $logdate = date('l jS \of F Y h:i:s A');
+    $insertlog = $conn->prepare("INSERT INTO activity_log(account_id, account_name, activity, log_date_time)
+    VALUES(:accid, :accname, :activity, :logtimedate)");
+    $insertlog->execute(array(
+    "accid" => $_SESSION['accountid'],
+    "accname" => $_SESSION['accountname'],
+    "activity" => "Updated Record Of The Student with the ID ". $id ,
+    "logtimedate" => $logdate
+    ));
 
 		$_SESSION['recordlistnotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> Record Updated!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 					<span aria-hidden='true'>&times;</span>

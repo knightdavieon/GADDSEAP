@@ -207,16 +207,16 @@ if (!empty($_POST)){
 
 
 
-				// date_default_timezone_set('Asia/Manila');
-				// $logdate = date('l jS \of F Y h:i:s A');
-				// $insertlog = $conn->prepare("INSERT INTO activity_log(account_id, account_name, activity, log_date_time)
-				// VALUES(:accid, :accname, :activity, :logtimedate)");
-				// $insertlog->execute(array(
-				// "accid" => $_SESSION['accountid'],
-				// "accname" => $_SESSION['accountname'],
-				// "activity" => "Updated accommodation image of the accommodation with the accommodation ID ". $accommodationid ,
-				// "logtimedate" => $logdate
-				// ));
+				date_default_timezone_set('Asia/Manila');
+				$logdate = date('l jS \of F Y h:i:s A');
+				$insertlog = $conn->prepare("INSERT INTO activity_log(account_id, account_name, activity, log_date_time)
+				VALUES(:accid, :accname, :activity, :logtimedate)");
+				$insertlog->execute(array(
+				"accid" => $_SESSION['accountid'],
+				"accname" => $_SESSION['accountname'],
+				"activity" => "New Record Saved with the IP " . $_SERVER['REMOTE_ADDR'],
+				"logtimedate" => $logdate
+				));
 
 				$_SESSION['recordlistnotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> The record has been saved and file". basename( $_FILES["fileToUpload"]["name"])." has been uploaded<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 				<span aria-hidden='true'>&times;</span>

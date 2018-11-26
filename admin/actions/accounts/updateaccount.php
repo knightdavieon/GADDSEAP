@@ -28,7 +28,7 @@ session_start();
 						    "usercont" => $contactNo,
 						    "id" => $id
 						));
-						/*
+
 						date_default_timezone_set('Asia/Manila');
 			            $logdate = date('l jS \of F Y h:i:s A');
 			            $insertlog = $conn->prepare("INSERT INTO activity_log(account_id, account_name, activity, log_date_time)
@@ -39,7 +39,7 @@ session_start();
 			                "activity" => "Updated account informations of the account with the account ID ". $id ,
 			                "logtimedate" => $logdate
 			            ));
-						*/
+						
 							$_SESSION['accountsNotifications'] = "<div class='alert alert-primary' role='alert'><strong>Success!</strong> Account Updated!<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 								    <span aria-hidden='true'>&times;</span>
 								  </button></div>";
