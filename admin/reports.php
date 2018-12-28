@@ -1,5 +1,13 @@
 <?php
 include("sessionhandler.php");
+
+if($_SESSION['account_type'] == "staff"){
+	echo ("<script language='JavaScript'>
+
+				window.location.href='../admin';
+				</SCRIPT>");
+}
+
 include("../accessdb.php");
 
 ?>
@@ -67,62 +75,62 @@ include("../accessdb.php");
                 </div>
             </div>
             <!-- End Bread crumb -->
+						<div>
+								<?php if(isset($_SESSION['reportsNotifications'])){echo $_SESSION['reportsNotifications']; unset($_SESSION['reportsNotifications']);} ?>
+						</div>
             <!-- Container fluid  -->
             <div class="container-fluid">
                 <!-- Start Page Content -->
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card p-30">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-exclamation f-s-60 color-primary"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h2><?php
-
-                                    ?></h2>
-                                    <p class="m-b-0">Number of Students</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="#" data-toggle="modal" data-target="#generateall" >
+                          <div class="card p-30">
+                              <div class="media">
+                                  <div class="media-left meida media-middle">
+                                      <span><i class="fa fa-list f-s-60 color-primary"></i></span>
+                                  </div>
+                                  <div class="media-body media-text-right">
+                                      <h2>ALL</h2>
+                                      <p class="m-b-0">Generate All In Database</p>
+                                  </div>
+                              </div>
+                          </div>
+                        </a>
                     </div>
                     <div class="col-md-4">
+											<a href="#" data-toggle="modal" data-target="#generateschool" >
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-book f-s-60 color-green"></i></span>
+                                    <span><i class="fa fa-building f-s-60 color-primary"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2><?php
-
-                                    ?></h2>
-                                    <p class="m-b-0">Pending</p>
+                                    <h2>School</h2>
+                                    <p class="m-b-0">Generate Per School</p>
                                 </div>
                             </div>
                         </div>
+											</a>
                     </div>
                     <div class="col-md-4">
+											<a href="#" data-toggle="modal" data-target="#generatemunicipality" >
                         <div class="card p-30">
                             <div class="media">
                                 <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-check f-s-60 color-warning"></i></span>
+                                    <span><i class="fa fa-home f-s-60 color-primary"></i></span>
                                 </div>
                                 <div class="media-body media-text-right">
-                                    <h2><?php
-                                    // $selectchecked = $conn->query("SELECT count(*) FROM reservations where reservation_status = 'CHECKED IN'");
-                                    // $number_of_rows3 = $selectchecked->fetchColumn();
-                                    //
-                                    // echo $number_of_rows3;
-
-                                    ?></h2>
-                                    <p class="m-b-0">Pending</p>
+                                    <h2>Municipality</h2>
+                                    <p class="m-b-0">Generate Per Municipality</p>
                                 </div>
                             </div>
                         </div>
+											</a>
                     </div>
                 </div>
                 <!-- End PAge Content -->
             </div>
+            <?php include("actions/reports/reportsactionpop.php"); ?>
 
 
             <!-- End Container fluid  -->

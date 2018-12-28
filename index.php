@@ -28,6 +28,13 @@
   body{
     background-color: #F4F4F4;
   }
+  .divider{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid black;
+}
   /* Tablet and bigger */
   @media ( min-width: 768px ) {
     .grid-divider {
@@ -168,7 +175,7 @@
             <hgroup>
               <h1></h1>
               <h3></h3>
-              <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW</a> -->
+              <!-- <a type="button" class="btn btn-lg btn-car" role="button" href="reservation/">BOOK NOW<  /a> -->
             </hgroup>
           </div>
           <div class="overlay"></div>
@@ -182,8 +189,8 @@
   <!-- END OF CAROUSEL-->
 
   <!-- start of mission vision -->
-  <div class="container-fluid" style="margin: 0; padding: 0;  background-color: #f4f4f4; padding-top: 8vh;">
-    <div class="row grid-divider">
+  <div class="container-fluid" style="margin: 0; padding-left: 0; padding-right: 0; padding-top: 15px; padding-bottom: 45px; background-color: #f4f4f4; padding-top: 8vh;">
+    <div class="row ">
       <div class="col-md-6">
         <div class="col-padding">
           <h3>MISSION</h3>
@@ -230,6 +237,44 @@
               </a>
               <a target="_blank"  rel="nofollow">
                 <img class="logo" src="resources/images/collegelogo/prmsu.png" alt="columban">
+              </a>
+
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/adamsonuniversity.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/amaolongapo.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/celtech.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/columbanlogo.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/gordoncollege.png" alt="columban">
+              </a>
+
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/kns.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/lyceumofsubic.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/pup.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/st.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/sviat.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/tesda.png" alt="columban">
+              </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/ue.png" alt="columban">
               </a>
             </div>
           </div>

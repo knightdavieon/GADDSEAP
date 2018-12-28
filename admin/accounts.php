@@ -1,5 +1,13 @@
 <?php
 include("sessionhandler.php");
+
+if($_SESSION['account_type'] == "staff"){
+	echo ("<script language='JavaScript'>
+
+				window.location.href='../admin';
+				</SCRIPT>");
+}
+
 include_once("../accessdb.php");
 //include_once("scriptvalidation.php");
 
