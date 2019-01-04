@@ -11,7 +11,7 @@
 
         </div>
         <div class="modal-footer">
-          <input type="hidden" name="accountid" value="<?php echo $row['account_id']; ?>" />
+
           <button type="submit" class="btn btn-primary">Generate</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
@@ -48,7 +48,7 @@
 
         </div>
         <div class="modal-footer">
-          <input type="hidden" name="accountid" value="<?php echo $row['account_id']; ?>" />
+
           <button type="submit" class="btn btn-primary">Generate</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
@@ -60,7 +60,7 @@
 <div class="modal "  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="generatemunicipality">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <form action="actions/reports/" method="post">
+      <form action="actions/reports/printmunicipality.php" method="post">
         <div class="modal-header">
           <h4>Generate Per Municipality?</h4>
         </div>
@@ -71,7 +71,7 @@
           <div class="container" style=" text-align:center;">
 					Select Municipality:
 					<br />
-					<select class="form-control" style="text-align:center;" name = "Municipality" >
+					<select class="form-control" style="text-align:center;" name="municipality" >
             <option value=" " SELECTED >--SELECT Municipality--</option>
 						<?php
             $selectdistinctmunicipality = $conn->query("SELECT DISTINCT address_mun from personal_info");
@@ -87,7 +87,7 @@
 
         </div>
         <div class="modal-footer">
-          <input type="hidden" name="accountid" value="<?php echo $row['account_id']; ?>" />
+
           <button type="submit" class="btn btn-primary">Generate</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
