@@ -27,7 +27,7 @@
                             <a class="nav-link dropdown-toggle text-muted" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../resources/admindesign/images/bookingSystem/2.png" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                 <ul class="dropdown-user">
-                                    <li><a href="#"><i class="ti-user"></i><?php echo "  ".$_SESSION['accountname'];?></a></li>
+                                    <li><a href="#"><i class="ti-user"></i><?php echo "  ".$_SESSION['accountname'] . " - " . strtoupper($_SESSION['account_type']) ;?></a></li>
                                     <li><a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-power-off"></i> Logout</a></li>
                                 </ul>
                             </div>

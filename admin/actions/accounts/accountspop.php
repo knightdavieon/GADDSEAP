@@ -75,7 +75,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Change Password</label>
-                                    <input type="password" class="form-control"style="border-color: rgb(41, 41, 41);color:#424141;" placeholder="Contact Number" value="" name="password" />
+                                    <input type="password" class="form-control"style="border-color: rgb(41, 41, 41);color:#424141;" placeholder="Password" value="" name="password" />
                                 </div>
                             </div>
                             <div class="col-md-6">

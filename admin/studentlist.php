@@ -119,7 +119,13 @@ unset($_SESSION['selectedid']);
                                 $selectedid = $rowpersonal['record_id'];
                                 ?>
                               </td>
-                              <td>   <!-- Delete -->
+                              <td>
+                                <?php if($_SESSION['account_type'] == "staff"){
+
+                                }else{
+
+                                 ?>
+                                <!-- Delete -->
                                 <button class="btn btn-rounded btn-danger"  href="#deleterecord<?php echo $i;?>" data-toggle="modal" data-target="#deleterecord<?php echo $i;?>"><i class="fa fa-trash" aria-hidden="true"></i></button>
 
 
@@ -127,72 +133,74 @@ unset($_SESSION['selectedid']);
                                 <form method="post" action="editform.php">
                                   <input type="hidden" name="selectedid" value="<?php echo $selectedid;?>">
                                   <button class="btn btn-rounded btn-primary" ><i class="fa fa-id-card" aria-hidden="true"></i></button>
-                                </form></td>
-                              </tr>
-                              <?php include('actions/records/recordpop.php');
-                              $i++;
-                            } ?>
-                          </tbody>
-                        </table>
-                      </div>
+                                </form>
+                              <?php } ?>
+                              </td>
+                            </tr>
+                            <?php include('actions/records/recordpop.php');
+                            $i++;
+                          } ?>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-
               </div>
-              <!-- End PAge Content -->
+
             </div>
-
-
-            <!-- End Container fluid  -->
-            <!-- footer -->
-            <footer class="footer"> © 2018 All rights reserved.</footer>
-            <!-- End footer -->
+            <!-- End PAge Content -->
           </div>
 
-          <!-- End Page wrapper  -->
+
+          <!-- End Container fluid  -->
+          <!-- footer -->
+          <footer class="footer"> © 2018 All rights reserved.</footer>
+          <!-- End footer -->
         </div>
-        <!-- End Wrapper -->
-        <!-- All Jquery -->
-        <script src="../resources/admindesign/js/lib/jquery/jquery.min.js"></script>
-        <!-- Bootstrap tether Core JavaScript -->
-        <script src="../resources/admindesign/js/lib/bootstrap/js/popper.min.js"></script>
-        <script src="../resources/admindesign/js/lib/bootstrap/js/bootstrap.min.js"></script>
-        <!-- slimscrollbar scrollbar JavaScript -->
-        <script src="../resources/admindesign/js/jquery.slimscroll.js"></script>
-        <!--Menu sidebar -->
-        <script src="../resources/admindesign/js/sidebarmenu.js"></script>
-        <!--stickey kit -->
-        <script src="../resources/admindesign/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
-        <!--Custom JavaScript -->
-        <script src="../resources/admindesign/js/custom.min.js"></script>
-        <script src="../resources/admindesign/js/lib/datatables/datatables.min.js"></script>
-        <script src="../resources/admindesign/js/lib/datatables/datatables2-init.js"></script>
+
+        <!-- End Page wrapper  -->
+      </div>
+      <!-- End Wrapper -->
+      <!-- All Jquery -->
+      <script src="../resources/admindesign/js/lib/jquery/jquery.min.js"></script>
+      <!-- Bootstrap tether Core JavaScript -->
+      <script src="../resources/admindesign/js/lib/bootstrap/js/popper.min.js"></script>
+      <script src="../resources/admindesign/js/lib/bootstrap/js/bootstrap.min.js"></script>
+      <!-- slimscrollbar scrollbar JavaScript -->
+      <script src="../resources/admindesign/js/jquery.slimscroll.js"></script>
+      <!--Menu sidebar -->
+      <script src="../resources/admindesign/js/sidebarmenu.js"></script>
+      <!--stickey kit -->
+      <script src="../resources/admindesign/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+      <!--Custom JavaScript -->
+      <script src="../resources/admindesign/js/custom.min.js"></script>
+      <script src="../resources/admindesign/js/lib/datatables/datatables.min.js"></script>
+      <script src="../resources/admindesign/js/lib/datatables/datatables2-init.js"></script>
 
 
 
 
-      </body>
+    </body>
 
 
 
-      </html>
-      <div class="modal "  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="logoutModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <form action="logout.php" method="post">
-              <div class="modal-header">
-              </div>
-              <div class="modal-body">
+    </html>
+    <div class="modal "  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="logoutModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action="logout.php" method="post">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
 
-                <div style="text-align:center;"><font size="30px"><span class="fa fa-warning" style="color: red;"><h3>Are You Sure?</h3></span></font></div>
+              <div style="text-align:center;"><font size="30px"><span class="fa fa-warning" style="color: red;"><h3>Are You Sure?</h3></span></font></div>
 
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Logout</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Logout</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
