@@ -215,21 +215,21 @@ include("../accessdb.php");
 
 </html>
 <div class="modal "  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="logoutModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-                <form action="logout.php" method="post">
-                    <div class="modal-header">
-                    </div>
-                    <div class="modal-body">
-
-                        <div style="text-align:center;"><font size="30px"><span class="fa fa-warning" style="color: red;"><h3>Are You Sure?</h3></span></font></div>
-
-                    </div>
-                    <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Logout</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    </div>
-                </form>
-          </div>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="logout.php" method="post">
+        <div class="modal-header">
         </div>
-      </div>
+        <div class="modal-body">
+
+          <div style="text-align:center;"><font size="30px"><span class="fa fa-warning" style="color: red;"><h3>Are You Sure?</h3></span></font></div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Logout</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

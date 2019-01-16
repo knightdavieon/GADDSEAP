@@ -276,6 +276,9 @@
               <a target="_blank"  rel="nofollow">
                 <img class="logo" src="resources/images/collegelogo/ue.png" alt="columban">
               </a>
+              <a target="_blank"  rel="nofollow">
+                <img class="logo" src="resources/images/collegelogo/enderun.png" alt="columban">
+              </a>
             </div>
           </div>
         </div>
