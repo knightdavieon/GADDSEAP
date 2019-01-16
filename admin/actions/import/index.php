@@ -99,11 +99,14 @@
               					"contact_no" => $contactnumber,
               				));
 
-                      
+
                     }
                  }
 
              }
+             echo "<script language='JavaScript'>
+             window.location.href='../../';
+             </SCRIPT>";
       }
       else
       {
