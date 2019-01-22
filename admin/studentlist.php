@@ -102,7 +102,7 @@ unset($_SESSION['selectedid']);
                         <tbody>
                           <?php
 
-                          $selectpersonal = $conn->query("SELECT * FROM personal_info");
+                          $selectpersonal = $conn->query("SELECT * FROM personal_info where id = '1'");
                           $i='1';
                           While($rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC)){
                             ?>

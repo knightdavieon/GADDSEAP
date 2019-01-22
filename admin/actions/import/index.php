@@ -1,4 +1,6 @@
     <?php
+    //error reporting 0 turns off the notices and fatal errors display
+    error_reporting(0);
     include("../../../accessdb.php");
     require_once('vendor/php-excel-reader/excel_reader2.php');
     require_once('vendor/SpreadsheetReader.php');
@@ -68,6 +70,37 @@
                     $exploded[2] = " ";
                     $exploded = explode(",",$address);
 
+                    if(!isset($exploded[0])){
+                      $addbrgyy = " ";
+                    }else {
+                      $addbrgyy = $exploded[0];
+                    }
+
+                    if(!isset($exploded[1])){
+                      if(!isset($exploded[0])){
+                        $addmunn = " ";
+                      }else{
+                        $addmunn = $exploded[0];
+                      }
+                    }else{
+                      $addmunn = $exploded[1];
+                    }
+
+                    if (!isset($exploded[2])) {
+                      if(!isset($exploded[1])){
+                        if(!isset($exploded[0])){
+                          $addrProv = " ";
+                        }else{
+                          $addrProv = $exploded[0]);
+                        }
+
+                        }else{
+                          $addrProv = $exploded[1];
+                        }
+                    }else{
+                      $addrProv = $exploded[2];
+                    }
+
 
                      $contactnumber = "";
                     if(isset($Row[7])) {
@@ -91,9 +124,9 @@
               					"first_name" => ucwords($firstname),
               					"mi" => ucwords($mi),
               					"last_name" => ucwords($familyname),
-              					"addressbrgy" => ucwords($exploded[0]),
-              					"addressmun" => ucwords($exploded[1]),
-              					"addressprov" => ucwords($exploded[2]),
+              					"addressbrgy" => ucwords($addbrgyy),
+              					"addressmun" => ucwords($addmunn),
+              					"addressprov" => ucwords($addrProv),
               					"school" => ucwords($school),
               					"course" => $course,
               					"contact_no" => $contactnumber,
@@ -104,9 +137,9 @@
                  }
 
              }
-             echo "<script language='JavaScript'>
-             window.location.href='../../';
-             </SCRIPT>";
+             // echo "<script language='JavaScript'>
+             // window.location.href='../../';
+             // </SCRIPT>";
       }
       else
       {
