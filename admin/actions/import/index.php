@@ -145,9 +145,9 @@
                  }
 
              }
-             // echo "<script language='JavaScript'>
-             // window.location.href='../../';
-             // </SCRIPT>";
+             echo "<script language='JavaScript'>
+             window.location.href='../../';
+             </SCRIPT>";
       }
       else
       {
