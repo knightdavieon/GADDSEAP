@@ -73,7 +73,7 @@
                     if(!isset($exploded[0])){
                       $addbrgyy = " ";
                     }else {
-                      //$addbrgyy = $exploded[0];
+                      $addbrgyy = $exploded[0];
                     }
 
                     if(!isset($exploded[1])){
@@ -83,7 +83,7 @@
                         $addmunn = $exploded[0];
                       }
                     }else{
-                      $addmunn = $exploded[1];
+                      $addmunn = $exploded[0];
                     }
 
                     if (!isset($exploded[2])) {
