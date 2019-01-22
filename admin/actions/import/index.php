@@ -70,35 +70,43 @@
                     $exploded[2] = " ";
                     $exploded = explode(",",$address);
 
-                    if(!isset($exploded[0])){
-                      $addbrgyy = " ";
-                    }else {
-                      $addbrgyy = $exploded[0];
-                    }
-
-                    if(!isset($exploded[1])){
-                      if(!isset($exploded[0])){
-                        $addmunn = " ";
-                      }else{
-                        $addmunn = $exploded[0];
-                      }
-                    }else{
-                      $addmunn = $exploded[0];
-                    }
+                    // if(!isset($exploded[0])){
+                    //   $addbrgyy = " ";
+                    // }else {
+                    //   $addbrgyy = $exploded[0];
+                    // }
+                    //
+                    // if(!isset($exploded[1])){
+                    //   if(!isset($exploded[0])){
+                    //     $addmunn = " ";
+                    //   }else{
+                    //     $addmunn = $exploded[0];
+                    //   }
+                    // }else{
+                    //   $addmunn = $exploded[0];
+                    // }
 
                     if (!isset($exploded[2])) {
                       if(!isset($exploded[1])){
                         if(!isset($exploded[0])){
                           $addrProv = " ";
+                          $addmunn = " ";
+                          $addbrgyy = " ";
                         }else{
                           $addrProv = $exploded[0];
+                          $addmunn = " ";
+                          $addbrgyy = " ";
                         }
 
                         }else{
                           $addrProv = $exploded[1];
+                          $addmunn = $exploded[0];
+                          $addbrgyy = " ";
                         }
                     }else{
                       $addrProv = $exploded[2];
+                      $addmunn = $exploded[1];
+                      $addbrgyy = $exploded[0];
                     }
 
 
