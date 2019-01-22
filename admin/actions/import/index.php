@@ -91,7 +91,7 @@
                         if(!isset($exploded[0])){
                           $addrProv = " ";
                         }else{
-                          $addrProv = $exploded[0]);
+                          $addrProv = $exploded[0];
                         }
 
                         }else{
