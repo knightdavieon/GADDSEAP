@@ -145,7 +145,7 @@ include("../accessdb.php");
                                     <table id="myTable2" class="table table-striped">
                                         <thead>
                                             <tr>
-                                                <td>Id</td>
+                                                <td>Id </td>
                                                 <td>Account Id</td>
                                                 <td>Account Name</td>
                                                 <td>Activity</td>
