@@ -1,8 +1,43 @@
 <?php
 include("sessionhandler.php");
 include("../accessdb.php");
+if(!isset($result)){
+  $result = "SELECT * FROM personal_info where id = '1'";
+}
+if(isset($_POST['btnsearch']))
+{
+  $by_name = $_POST['searchName'];
+  $by_sex = $_POST['searchNumber'];
+  $by_group = $_POST['searchMun'];
 
-unset($_SESSION['selectedid']);
+  //Do real escaping here
+
+  $query = "SELECT * FROM personal_info";
+  $conditions = array();
+
+  if(! empty($by_name)) {
+    $conditions[] = "first_name LIKE '$by_name' OR last_name LIKE '$by_name'";
+  }
+  if(! empty($by_sex)) {
+    $conditions[] = "contact_no LIKE '$by_sex'";
+  }
+  if(! empty($by_group)) {
+    $conditions[] = "address_mun LIKE '$by_group'";
+  }
+
+  $sql = $query;
+  if (count($conditions) > 0) {
+    $sql .= " WHERE " . implode(' AND ', $conditions);
+  }
+
+  $result = $sql;
+}
+
+
+
+
+
+//unset($_SESSION['selectedid']);
 
 ?>
 <!DOCTYPE html>
@@ -34,6 +69,9 @@ unset($_SESSION['selectedid']);
   <style>
   .color-green{
     color: #17B31F;
+  }
+  .bg-color-gray{
+    background-color: #F3F3F3;
   }
 
 </style>
@@ -85,6 +123,34 @@ unset($_SESSION['selectedid']);
 
                   </div>
                   <div class="card-body">
+                    <div>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="Search Filter">
+                        Search Filter
+                      </button>
+                      <div class="collapse" id="collapseSearch">
+                        <div class="card card-body " style="background:#f3f3f3;">
+                          <form action="studentlist.php" method="post">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                      <input class="form-control" type="text" name="searchName" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-4">
+                                      <input class="form-control" type="text" name="searchNumber" placeholder="Contact Number">
+                                    </div>
+                                    <div class="col-md-4">
+                                      <input class="form-control" type="text" name="searchMun" placeholder="Municipality">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                              <button class="btn btn-primary" type="submit" name="btnsearch">Search</button>
+
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                     <div class="table-responsive">
                       <table id="myTable2" class="table table-bordered table-striped">
                         <thead>
@@ -102,7 +168,7 @@ unset($_SESSION['selectedid']);
                         <tbody>
                           <?php
 
-                          $selectpersonal = $conn->query("SELECT * FROM personal_info where id = '1'");
+                          $selectpersonal = $conn->query($result);
                           $i='1';
                           While($rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC)){
                             ?>
@@ -117,6 +183,7 @@ unset($_SESSION['selectedid']);
                               <td><?php echo $rowpersonal['contact_no']; ?>
                                 <?php
                                 $selectedid = $rowpersonal['record_id'];
+                                //echo $selectedid;
                                 ?>
                               </td>
                               <td>
@@ -124,17 +191,17 @@ unset($_SESSION['selectedid']);
 
                                 }else{
 
-                                 ?>
-                                <!-- Delete -->
-                                <button class="btn btn-rounded btn-danger"  href="#deleterecord<?php echo $i;?>" data-toggle="modal" data-target="#deleterecord<?php echo $i;?>"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                  ?>
+                                  <!-- Delete -->
+                                  <button class="btn btn-rounded btn-danger"  href="#deleterecord<?php echo $i;?>" data-toggle="modal" data-target="#deleterecord<?php echo $i;?>"><i class="fa fa-trash" aria-hidden="true"></i></button>
 
 
-                                <!-- Edit -->
-                                <form method="post" action="editform.php">
-                                  <input type="hidden" name="selectedid" value="<?php echo $selectedid;?>">
-                                  <button class="btn btn-rounded btn-primary" ><i class="fa fa-id-card" aria-hidden="true"></i></button>
-                                </form>
-                              <?php } ?>
+                                  <!-- Edit -->
+                                  <form method="post" action="editform.php">
+                                    <input type="hidden" name="selectedid" value="<?php echo $selectedid;?>">
+                                    <button class="btn btn-rounded btn-primary" ><i class="fa fa-id-card" aria-hidden="true"></i></button>
+                                  </form>
+                                <?php } ?>
                               </td>
                             </tr>
                             <?php include('actions/records/recordpop.php');

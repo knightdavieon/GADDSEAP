@@ -12,7 +12,7 @@ if (!empty($_POST)){
   $selectedid = $_POST['selectedid'];
   $_SESSION['selectedid'] = $selectedid;
 }
- $selectpersonal = $conn->query("SELECT * FROM personal_info JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid'");
+ $selectpersonal = $conn->query("SELECT * FROM personal_info LEFT JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid' UNION ALL SELECT * FROM personal_info RIGHT JOIN family_background ON personal_info.record_id=family_background.record_id WHERE personal_info.record_id = '$selectedid' ");
  $rowpersonal = $selectpersonal->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
