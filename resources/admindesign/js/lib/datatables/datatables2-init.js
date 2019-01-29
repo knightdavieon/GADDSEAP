@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('#myTable2').DataTable( {
-        "order": [[ 5, "desc" ]]
+        "order": [[ 1, "desc" ]]
     } );
 } );
